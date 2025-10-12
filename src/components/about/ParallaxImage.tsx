@@ -21,7 +21,8 @@ export default function ParallaxImage() {
         style={{ y, scale }}
       >
         <img
-          src="https://images.unsplash.com/photo-1605170439002-90845e8c0137"
+          src="https://images.unsplash.com/photo-1605170439002-90845e8c0137?w=1920"
+          srcSet="https://images.unsplash.com/photo-1605170439002-90845e8c0137?w=1080 1080w, https://images.unsplash.com/photo-1605170439002-90845e8c0137?w=1920 1920w"
           alt="SkyCourt Mall"
           loading="lazy"
           className="w-full h-full object-cover"

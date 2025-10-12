@@ -20,7 +20,8 @@ export default function AboutHero() {
   return (
     <div ref={containerRef} className="relative h-screen flex items-center justify-center overflow-hidden">
       <motion.img
-        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
+        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920"
+        srcSet="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1080 1080w, https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920 1920w"
         alt="About Us Hero"
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover"

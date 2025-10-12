@@ -158,6 +158,9 @@
   "nav_services": "Services",
   "dining_headline": "Dining at SkyCourt",
   "dining_subheadline": "Explore a curated selection of cafes and restaurants.",
+  "cafes": "Cafes",
+  "location": "Location",
+  "contact": "Contact",
   "stories_title": "Stories",
   "eateries": {
     "kfc": {

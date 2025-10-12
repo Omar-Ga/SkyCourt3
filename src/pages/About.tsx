@@ -43,6 +43,7 @@ export default function About() {
             content={story.content}
             image={story.image}
             index={index}
+            totalStories={stories.length}
             scrollYProgress={scrollYProgress}
           />
         ))}

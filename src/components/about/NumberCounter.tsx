@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 
 interface NumberCounterProps {
   number: number;
@@ -9,33 +9,22 @@ interface NumberCounterProps {
 }
 
 export default function NumberCounter({ number, label, suffix, delay = 0 }: NumberCounterProps) {
-  const [count, setCount] = useState(0);
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, latest => Math.round(latest));
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (!isInView) return;
 
-    const timeout = setTimeout(() => {
-      let start = 0;
-      const duration = 2000;
-      const increment = number / (duration / 16);
+    const controls = animate(count, number, {
+      duration: 2,
+      delay: delay,
+      ease: "easeOut",
+    });
 
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= number) {
-          setCount(number);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(start));
-        }
-      }, 16);
-
-      return () => clearInterval(timer);
-    }, delay * 1000);
-
-    return () => clearTimeout(timeout);
-  }, [isInView, number, delay]);
+    return () => controls.stop();
+  }, [isInView, number, delay, count]);
 
   return (
     <motion.div
@@ -53,7 +42,7 @@ export default function NumberCounter({ number, label, suffix, delay = 0 }: Numb
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: delay + 0.2, type: "spring" }}
       >
-        {count}
+        <motion.span>{rounded}</motion.span>
         <span className="text-scm-green">{suffix}</span>
       </motion.div>
       <motion.p
