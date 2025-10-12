@@ -20,9 +20,9 @@ export function FeatureItem({ feature, isActive }: FeatureItemProps) {
 
   return (
     <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ amount: 0.8 }}>
-      <div className="flex items-start gap-6">
+      <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-6">
         <motion.div
-          className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300"
+          className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 mb-4 md:mb-0"
                       animate={{
                         backgroundColor: isActive ? 'hsl(279, 65%, 32%)' : '#000000',
                         color: isActive ? 'hsl(210, 40%, 98%)' : '#FFFFFF',
@@ -30,7 +30,7 @@ export function FeatureItem({ feature, isActive }: FeatureItemProps) {
                       }}        >
           <Icon className="w-6 h-6" strokeWidth={1.5} />
         </motion.div>
-        <div className="relative pt-1 pl-4 bg-[rgb(150,215,163,0.32)] rounded-lg w-[340px] h-32 flex-shrink-0">
+        <div className="relative pt-1 md:pl-4 bg-[rgb(150,215,163,0.32)] rounded-lg w-full md:w-auto h-auto md:h-32 flex-shrink-0">
           <h3 className="serif text-2xl md:text-3xl font-medium text-black mb-3">
             {feature.title}
           </h3>

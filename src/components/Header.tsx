@@ -117,7 +117,7 @@ export default function Header({ show }: { show: boolean }) {
                 <Link
                   key={item.key}
                   to={item.href}
-                  className="serif text-3xl text-black/80 hover:text-black transition-colors"
+                  className="serif text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {t(item.key)}
@@ -129,7 +129,7 @@ export default function Header({ show }: { show: boolean }) {
                     handleSectionScroll(item.sectionId!);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="serif text-3xl text-black/80 hover:text-black transition-colors"
+                  className="serif text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
                 >
                   {t(item.key)}
                 </button>
@@ -137,7 +137,7 @@ export default function Header({ show }: { show: boolean }) {
             ))}
             <button
               onClick={() => { toggleLanguage(); setIsMobileMenuOpen(false); }}
-              className="serif text-3xl text-black/80 hover:text-black transition-colors"
+              className="serif text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
             >
               {i18n.language === 'en' ? 'AR' : 'EN'}
             </button>

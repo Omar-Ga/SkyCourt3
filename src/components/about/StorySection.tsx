@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView, MotionValue } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface StorySectionProps {
   title: string;
@@ -10,6 +11,9 @@ interface StorySectionProps {
 }
 
 export default function StorySection({ title, content, image, index }: StorySectionProps) {
+  const { i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, margin: "-20%" });
 
@@ -23,23 +27,24 @@ export default function StorySection({ title, content, image, index }: StorySect
   const textY = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
   const isEven = index % 2 === 0;
-
-  const words = content.split(' ');
+  const shouldFlipOrder = isRtl ? isEven : !isEven;
 
   return (
     <section
       ref={sectionRef}
       className="relative min-h-screen flex items-center py-20 overflow-hidden"
+      dir={i18n.dir()}
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isEven ? '' : 'lg:grid-flow-dense'}`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}>
           <motion.div
-            className={`relative ${isEven ? '' : 'lg:col-start-2'}`}
+            className={`relative ${shouldFlipOrder ? 'lg:col-start-2' : ''}`}
             style={{ y: textY }}
           >
             <motion.div
-              initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : (isEven ? -50 : 50) }}
+              className={isRtl ? 'md:text-right' : ''}
+              initial={{ opacity: 0, x: shouldFlipOrder ? 50 : -50 }}
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : (shouldFlipOrder ? 50 : -50) }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <motion.h2
@@ -48,7 +53,7 @@ export default function StorySection({ title, content, image, index }: StorySect
                 {title.split(' ').map((word, i) => (
                   <motion.span
                     key={i}
-                    className="inline-block mr-4"
+                    className={`inline-block ${isRtl ? 'ml-4' : 'mr-4'}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                     transition={{ duration: 0.5, delay: 0.3 + i * 0.05 }}
@@ -59,7 +64,7 @@ export default function StorySection({ title, content, image, index }: StorySect
               </motion.h2>
 
               <motion.div
-                className="h-px w-16 bg-black/20 mb-8"
+                className={`h-px w-16 bg-black/20 mb-8 ${isRtl ? 'ml-auto' : ''}`}
                 initial={{ width: 0 }}
                 animate={{ width: isInView ? 64 : 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -77,7 +82,7 @@ export default function StorySection({ title, content, image, index }: StorySect
           </motion.div>
 
           <motion.div
-            className={`relative ${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}
+            className={`relative ${shouldFlipOrder ? 'lg:col-start-1 lg:row-start-1' : ''}`}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -103,7 +108,7 @@ export default function StorySection({ title, content, image, index }: StorySect
             <motion.div
               className="absolute -z-10 inset-0 bg-gradient-to-br from-neutral-200 to-neutral-300 rounded-2xl"
               style={{
-                x: isEven ? -20 : 20,
+                x: shouldFlipOrder ? 20 : -20,
                 y: -20,
               }}
               initial={{ opacity: 0 }}

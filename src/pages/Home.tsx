@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
+import { useIsMobile } from '../hooks/use-mobile';
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -19,6 +20,7 @@ export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
   const heroInView = useInView(heroRef, { margin: '-50% 0px -50% 0px' });
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     document.documentElement.dir = i18n.dir();
@@ -39,7 +41,7 @@ export default function Home() {
     <>
       <div className="grain-overlay" />
 
-      <Header show={!heroInView} />
+      <Header show={isMobile || !heroInView} />
       <main>
         <Hero ref={heroRef} />
         <Features />

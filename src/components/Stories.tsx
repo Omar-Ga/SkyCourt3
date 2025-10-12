@@ -85,7 +85,7 @@ export default function Stories() {
         </motion.h2>
       </div>
 
-      <div className="relative h-[70vh] min-h-[600px]" style={{ touchAction: 'none' }} {...bind()}>
+      <div className="relative h-[70vh] min-h-[600px]" style={{ touchAction: 'pan-y' }} {...bind()}>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
