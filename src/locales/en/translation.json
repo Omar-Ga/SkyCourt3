@@ -161,6 +161,9 @@
   "cafes": "Cafes",
   "location": "Location",
   "contact": "Contact",
+  "cafes_section_badge": "Our Cafes",
+  "cafes_headline_prefix": "Discover Our",
+  "cafes_subheadline": "From a quick coffee to a relaxing lunch, choose from our diverse selection of cafes.",
   "stories_title": "Stories",
   "eateries": {
     "kfc": {

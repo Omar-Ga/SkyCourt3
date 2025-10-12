@@ -46,7 +46,7 @@ export default function Cafes() {
             <RotatingText 
               text={cafeNames}
               duration={3000}
-              className="text-primary inline-block min-w-[300px]"
+              className="text-primary inline-block"
               containerClassName="inline-block"
             />
           </h1>
@@ -79,12 +79,6 @@ export default function Cafes() {
       <section ref={containerRef} className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {cafes.map((cafe, index) => {
-            const yOffset = useTransform(
-              scrollYProgress,
-              [0, 0.5, 1],
-              [100, 0, -50]
-            );
-            
             return (
               <motion.div
                 key={cafe.id}
@@ -97,7 +91,7 @@ export default function Cafes() {
                   type: "spring",
                   stiffness: 100
                 }}
-                style={{ y: yOffset }}
+                style={{ y: useTransform(scrollYProgress, [0, 1], [100 * (index * 0.1), -50 * (index * 0.1)]) }}
                 className="group cursor-pointer perspective-1000"
                 onClick={() => setSelectedCafe(cafe)}
               >

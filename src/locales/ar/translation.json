@@ -116,6 +116,9 @@
   "cafes": "المقاهي",
   "location": "الموقع",
   "contact": "اتصل بنا",
+  "cafes_section_badge": "مقاهينا",
+  "cafes_headline_prefix": "اكتشف",
+  "cafes_subheadline": "من قهوة سريعة إلى غداء مريح، اختر من مجموعتنا المتنوعة من المقاهي.",
   "stories_title": "قصص",
   "eateries": {
     "kfc": {

@@ -1,15 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Building2, Instagram, Facebook, Twitter } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 export default function Footer() {
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
 
   const socialLinks = [
     { icon: Instagram, label: 'Instagram', href: '#' },
     { icon: Facebook, label: 'Facebook', href: '#' },
     { icon: Twitter, label: 'Twitter', href: '#' },
   ];
+
+  const motionProps = (delay = 0) => ({
+    initial: isMobile ? false : { opacity: 0, y: 20 },
+    whileInView: isMobile ? false : { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.8, delay },
+  });
 
   return (
     <footer className="relative py-20 px-6 bg-black text-white overflow-hidden" id="contact">
@@ -20,12 +29,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{}}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div {...motionProps()}>
             <div className="flex items-center gap-3 mb-6">
               <Building2 className="w-10 h-10" strokeWidth={1.5} />
               <span className="serif text-3xl font-semibold tracking-wide">{t('skycourt')}</span>
@@ -54,10 +58,7 @@ export default function Footer() {
 
           <motion.div
             className="grid grid-cols-2 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            {...motionProps(0.2)}
           >
             <div>
               <h3 className="text-sm uppercase tracking-wider font-medium mb-4">{t('explore')}</h3>
@@ -108,10 +109,7 @@ export default function Footer() {
 
         <motion.div
           className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          {...motionProps(0.4)}
         >
           <p className="text-white/40 text-sm">
             {t('copyright')}
