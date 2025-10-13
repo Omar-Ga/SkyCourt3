@@ -16,7 +16,7 @@ export const cafes: Cafe[] = [
   {
     id: "cafe-1",
     nameKey: "cafes.cafe1.name",
-    logoUrl: "/cafes/cafe1/logo.png",
+    logoUrl: "/cafes/cafe1/logo.webp",
     phone: "+20-123-456-7920",
     taglineKey: "cafes.cafe1.tagline",
     details: [
@@ -28,7 +28,7 @@ export const cafes: Cafe[] = [
   {
     id: "cafe-2",
     nameKey: "cafes.cafe2.name",
-    logoUrl: "/cafes/cafe2/logo.png",
+    logoUrl: "/cafes/cafe2/logo.webp",
     phone: "+20-123-456-7921",
     taglineKey: "cafes.cafe2.tagline",
     details: [
@@ -40,7 +40,7 @@ export const cafes: Cafe[] = [
   {
     id: "cafe-3",
     nameKey: "cafes.cafe3.name",
-    logoUrl: "/cafes/cafe3/logo.png",
+    logoUrl: "/cafes/cafe3/logo.webp",
     phone: "+20-123-456-7922",
     taglineKey: "cafes.cafe3.tagline",
     details: [

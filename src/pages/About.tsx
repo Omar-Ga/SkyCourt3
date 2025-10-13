@@ -51,7 +51,6 @@ export default function About() {
               scrollYProgress={scrollYProgress}
             />
           )}
-          style={{ height: `${stories.length * 100}vh` }} // Approximate height
         />
 
         <section className="relative py-32 bg-black text-white overflow-hidden">

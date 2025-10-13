@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Building2, Instagram, Facebook, Twitter } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
+import clsx from 'clsx';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -19,6 +20,11 @@ export default function Footer() {
     viewport: { once: true },
     transition: { duration: 0.8, delay },
   });
+
+  const linkClasses = clsx(
+    "text-white/60 hover:text-primary",
+    !isMobile && "transition-colors"
+  );
 
   return (
     <footer className="relative py-20 px-6 bg-black text-white overflow-hidden" id="contact">
@@ -45,8 +51,8 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={isMobile ? {} : { scale: 1.1, rotate: 5 }}
+                    whileTap={isMobile ? {} : { scale: 0.95 }}
                     aria-label={social.label}
                   >
                     <Icon className="w-5 h-5" strokeWidth={1.5} />
@@ -64,17 +70,17 @@ export default function Footer() {
               <h3 className="text-sm uppercase tracking-wider font-medium mb-4">{t('explore')}</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#brands" className="text-white/60 hover:text-primary transition-colors">
+                  <a href="#brands" className={linkClasses}>
                     {t('nav_brands')}
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="text-white/60 hover:text-primary transition-colors">
+                  <a href="#services" className={linkClasses}>
                     {t('nav_services')}
                   </a>
                 </li>
                 <li>
-                  <a href="#location" className="text-white/60 hover:text-primary transition-colors">
+                  <a href="#location" className={linkClasses}>
                     {t('location')}
                   </a>
                 </li>
@@ -87,18 +93,18 @@ export default function Footer() {
                 <li>
                   <a
                     href={`mailto:${t('email_details')}`}
-                    className="text-white/60 hover:text-primary transition-colors"
+                    className={linkClasses}
                   >
                     {t('email_link')}
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-primary transition-colors">
+                  <a href="#" className={linkClasses}>
                     {t('call_link')}
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-primary transition-colors">
+                  <a href="#" className={linkClasses}>
                     {t('careers_link')}
                   </a>
                 </li>
@@ -115,10 +121,9 @@ export default function Footer() {
             {t('copyright')}
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-white/40 hover:text-primary text-sm transition-colors">
-              {t('privacy_policy')}
+            <a href="#" className={clsx("text-white/40 hover:text-primary text-sm", !isMobile && "transition-colors")}>
             </a>
-            <a href="#" className="text-white/40 hover:text-primary text-sm transition-colors">
+            <a href="#" className={clsx("text-white/40 hover:text-primary text-sm", !isMobile && "transition-colors")}>
               {t('terms_of_service')}
             </a>
           </div>
