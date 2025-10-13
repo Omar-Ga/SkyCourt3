@@ -41,17 +41,15 @@ export default function Features() {
           </p>
         </motion.div>
         <div className="relative grid md:grid-cols-2 gap-12 items-start">
-          <div className="md:sticky top-32">
-            <div className="h-[300px] md:h-[600px] overflow-hidden rounded-2xl">
-              <video
-                src="/herosection_viddd.webm"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="h-[300px] md:h-[600px] overflow-hidden rounded-2xl md:sticky top-32">
+                        <video
+              src="/herosection_viddd.webm"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
           </div>
           <div ref={targetRef} className="relative space-y-24 md:pt-20">
             {features.map((feature, index) => (
