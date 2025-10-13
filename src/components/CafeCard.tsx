@@ -1,25 +1,24 @@
-import { memo } from 'react';
 import { motion, useTransform, MotionValue } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Phone } from 'lucide-react';
 import { Cafe } from '../data/cafes';
-import { useIsMobile } from '../hooks/use-mobile';
 
 interface CafeCardProps {
   cafe: Cafe;
   index: number;
+  scrollYProgress: MotionValue<number>;
   setSelectedCafe: (cafe: Cafe) => void;
 }
 
-const CafeCard = ({ cafe, index, setSelectedCafe }: CafeCardProps) => {
+export default function CafeCard({ cafe, index, scrollYProgress, setSelectedCafe }: CafeCardProps) {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
+  const y = useTransform(scrollYProgress, [0, 1], [100 * (index * 0.1), -50 * (index * 0.1)]);
 
   return (
     <motion.div
       key={cafe.id}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 50, rotateX: 15 }}
+      whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ 
         duration: 0.8,
@@ -27,18 +26,19 @@ const CafeCard = ({ cafe, index, setSelectedCafe }: CafeCardProps) => {
         type: "spring",
         stiffness: 100
       }}
-      className={`cursor-pointer perspective-1000 ${!isMobile ? 'group' : ''}`}
+      style={{ y }}
+      className="group cursor-pointer perspective-1000"
       onClick={() => setSelectedCafe(cafe)}
     >
       <motion.div
-        whileHover={isMobile ? {} : { y: -10, rotateY: 5, scale: 1.02 }}
+        whileHover={{ y: -10, rotateY: 5, scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="relative bg-card rounded-3xl overflow-hidden transform-gpu"
+        className="relative bg-card rounded-3xl overflow-hidden shadow-luxury transform-gpu"
       >
         {/* Logo Section with Gradient Overlay */}
         <div className="relative h-80 bg-gradient-to-br from-primary/5 via-secondary/10 to-accent/5 flex items-center justify-center p-12">
           <motion.div
-            whileHover={isMobile ? {} : { scale: 1.1, rotate: 5 }}
+            whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
             className="relative z-10 w-full h-full"
           >
@@ -46,7 +46,7 @@ const CafeCard = ({ cafe, index, setSelectedCafe }: CafeCardProps) => {
               src={cafe.logoUrl} 
               alt={t(cafe.nameKey)}
               loading="lazy"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain drop-shadow-2xl"
             />
           </motion.div>
           
@@ -112,6 +112,4 @@ const CafeCard = ({ cafe, index, setSelectedCafe }: CafeCardProps) => {
       </motion.div>
     </motion.div>
   );
-};
-
-export default memo(CafeCard);
+}
