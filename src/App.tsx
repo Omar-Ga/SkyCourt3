@@ -15,7 +15,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <SmoothScroll>
-      <div className="overflow-x-hidden">
+      <div className="overflow-clip">
         <RouterProvider router={router} />
       </div>
     </SmoothScroll>

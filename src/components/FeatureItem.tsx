@@ -30,7 +30,7 @@ export function FeatureItem({ feature, isActive }: FeatureItemProps) {
                       }}        >
           <Icon className="w-6 h-6" strokeWidth={1.5} />
         </motion.div>
-        <div className="relative pt-1 pl-4 bg-[rgb(150,215,163,0.32)] rounded-lg w-[340px] h-32 flex-shrink-0">
+        <div className="relative pt-1 pl-4 bg-[rgb(150,215,163,0.32)] rounded-lg w-full h-32">
           <h3 className="serif text-2xl md:text-3xl font-medium text-black mb-3">
             {feature.title}
           </h3>

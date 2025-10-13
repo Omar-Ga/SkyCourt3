@@ -23,7 +23,7 @@ export default function Features() {
   });
 
   return (
-    <section className="relative py-32 px-6 bg-[#c4d9c8]" id="features">
+    <section className="relative py-32 px-6 bg-[#c4d9c8] overflow-clip" id="features">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-24"
