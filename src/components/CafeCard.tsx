@@ -8,14 +8,12 @@ import { useIsMobile } from '../hooks/use-mobile';
 interface CafeCardProps {
   cafe: Cafe;
   index: number;
-  scrollYProgress: MotionValue<number>;
   setSelectedCafe: (cafe: Cafe) => void;
 }
 
-const CafeCard = ({ cafe, index, scrollYProgress, setSelectedCafe }: CafeCardProps) => {
+const CafeCard = ({ cafe, index, setSelectedCafe }: CafeCardProps) => {
   const { t } = useTranslation();
   const isMobile = useIsMobile();
-  const y = useTransform(scrollYProgress, [0, 1], [100 * (index * 0.1), -50 * (index * 0.1)]);
 
   return (
     <motion.div
@@ -29,14 +27,13 @@ const CafeCard = ({ cafe, index, scrollYProgress, setSelectedCafe }: CafeCardPro
         type: "spring",
         stiffness: 100
       }}
-      style={{ y }}
-      className={`cursor-pointer ${!isMobile ? 'group' : ''}`}
+      className={`cursor-pointer perspective-1000 ${!isMobile ? 'group' : ''}`}
       onClick={() => setSelectedCafe(cafe)}
     >
       <motion.div
         whileHover={isMobile ? {} : { y: -10, rotateY: 5, scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="relative bg-card rounded-3xl overflow-hidden shadow-luxury transform-gpu"
+        className="relative bg-card rounded-3xl overflow-hidden transform-gpu"
       >
         {/* Logo Section with Gradient Overlay */}
         <div className="relative h-80 bg-gradient-to-br from-primary/5 via-secondary/10 to-accent/5 flex items-center justify-center p-12">
@@ -49,7 +46,7 @@ const CafeCard = ({ cafe, index, scrollYProgress, setSelectedCafe }: CafeCardPro
               src={cafe.logoUrl} 
               alt={t(cafe.nameKey)}
               loading="lazy"
-              className="w-full h-full object-contain drop-shadow-2xl"
+              className="w-full h-full object-contain"
             />
           </motion.div>
           

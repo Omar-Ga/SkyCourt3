@@ -5,6 +5,7 @@ import { Coffee, Phone, X } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { cafes, Cafe } from '../data/cafes';
+import { VirtuosoGrid } from 'react-virtuoso';
 import { useIsMobile } from '../hooks/use-mobile';
 import { RotatingText } from '../components/ui/shadcn-io/rotating-text';
 import CafeCard from '../components/CafeCard';
@@ -12,12 +13,7 @@ import CafeCard from '../components/CafeCard';
 export default function Cafes() {
   const { t } = useTranslation();
   const [selectedCafe, setSelectedCafe] = useState<Cafe | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-
+  
   const isMobile = useIsMobile();
 
   const cafeNames = cafes.map(cafe => t(cafe.nameKey));
@@ -81,18 +77,20 @@ export default function Cafes() {
         </section>
 
         {/* Cafes Grid with Premium Animations */}
-        <section ref={containerRef} className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {cafes.map((cafe, index) => (
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <VirtuosoGrid
+            useWindowScroll
+            data={cafes}
+            listClassName="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
+            itemContent={(index, cafe) => (
               <CafeCard 
                 key={cafe.id}
                 cafe={cafe} 
                 index={index} 
-                scrollYProgress={scrollYProgress} 
                 setSelectedCafe={setSelectedCafe} 
               />
-            ))}
-          </div>
+            )}
+          />
         </section>
 
         <Footer />
