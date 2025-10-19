@@ -75,7 +75,7 @@ export default function Stories() {
     <section className="relative py-24 overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <motion.h2
-          className="serif text-5xl md:text-7xl font-light text-black mb-6"
+          className="text-5xl md:text-7xl font-light text-black mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{}}
@@ -106,7 +106,7 @@ export default function Stories() {
                 />
                 <div className="absolute inset-0 z-20 flex flex-col justify-end p-12 md:p-20">
                   <motion.h3
-                    className="serif text-5xl md:text-7xl font-light text-white mb-6"
+                    className="text-5xl md:text-7xl font-light text-white mb-6"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -134,7 +134,7 @@ export default function Stories() {
                     <Quote className="w-16 h-16 text-primary/20 mx-auto mb-8" />
                   </motion.div>
                   <motion.p
-                    className="serif text-3xl md:text-5xl font-light text-white mb-12"
+                    className="text-3xl md:text-5xl font-light text-white mb-12"
                     style={{ lineHeight: 1.8 }}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

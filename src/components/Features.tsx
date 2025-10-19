@@ -32,7 +32,7 @@ export default function Features() {
           viewport={{}} 
           transition={{ duration: 0.8 }}
         >
-          <h2 className="serif text-5xl md:text-7xl font-light text-black mb-6">
+          <h2 className="text-5xl md:text-7xl font-light text-black mb-6">
             {t('why_choose_skycourt')}
           </h2>
 

@@ -83,7 +83,7 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
                 className="w-full overflow-hidden"
               >
                 <div ref={contentRef} className="w-full flex flex-col items-center px-4 pb-4">
-                  <h2 className="serif text-3xl font-medium text-black mb-1 text-center">{eatery.name}</h2>
+                  <h2 className="text-3xl font-medium text-black mb-1 text-center">{eatery.name}</h2>
                   <a href={`tel:${eatery.phone}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold hover:bg-primary/20">
                     <Phone className="h-4 w-4" /> {eatery.phone}
                   </a>

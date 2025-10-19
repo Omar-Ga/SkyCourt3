@@ -48,7 +48,7 @@ export default function StorySection({ title, content, image, index, totalStorie
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <motion.h2
-                className="serif text-4xl md:text-6xl lg:text-7xl font-light text-black mb-8 leading-tight"
+                className="text-4xl md:text-6xl lg:text-7xl font-light text-black mb-8 leading-tight"
               >
                 {title.split(' ').map((word, i) => (
                   <motion.span

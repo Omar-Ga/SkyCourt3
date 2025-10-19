@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Building2, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useIsMobile } from '../hooks/use-mobile';
 import clsx from 'clsx';
 
@@ -27,7 +28,7 @@ export default function Footer() {
   );
 
   return (
-    <footer className="relative py-20 px-6 bg-black text-white overflow-hidden" id="contact">
+    <footer className="relative py-20 px-6 bg-black text-white overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/20 rounded-full blur-[100px]" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-[100px]" />
@@ -38,7 +39,7 @@ export default function Footer() {
           <motion.div {...motionProps()}>
             <div className="flex items-center gap-3 mb-6">
               <Building2 className="w-10 h-10" strokeWidth={1.5} />
-              <span className="serif text-3xl font-semibold tracking-wide">{t('skycourt')}</span>
+              <span className="text-3xl font-semibold tracking-wide">{t('skycourt')}</span>
             </div>
             <p className="text-white/60 leading-relaxed max-w-md mb-8">
               {t('experience_shopping')}
@@ -91,12 +92,12 @@ export default function Footer() {
               <h3 className="text-sm uppercase tracking-wider font-medium mb-4">{t('connect')}</h3>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href={`mailto:${t('email_details')}`}
+                  <Link
+                    to="/contact-us"
                     className={linkClasses}
                   >
                     {t('email_link')}
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className={linkClasses}>
@@ -104,9 +105,12 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className={linkClasses}>
+                  <Link
+                    to="/careers"
+                    className={linkClasses}
+                  >
                     {t('careers_link')}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

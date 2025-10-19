@@ -64,7 +64,7 @@ export default function CafeCard({ cafe, index, scrollYProgress, setSelectedCafe
         {/* Content Section */}
         <div className="p-8 space-y-4">
           <motion.h3 
-            className="serif text-3xl font-medium text-foreground group-hover:text-primary transition-colors"
+            className="text-3xl font-medium text-foreground group-hover:text-primary transition-colors"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 + index * 0.1 }}

@@ -25,3 +25,8 @@ dist-ssr
 
 #user added files
 #ai prompts/
+
+# Gemini generated files
+$guides/
+$screenshots/
+$tasks/

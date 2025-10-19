@@ -102,7 +102,7 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
 
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-6">
         <motion.h1
-          className="font-alan-sans text-7xl md:text-9xl font-normal tracking-wider mb-6 text-center"
+          className="text-7xl md:text-9xl font-normal tracking-wider mb-6 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: textVisible ? 1 : 0 }}
         >

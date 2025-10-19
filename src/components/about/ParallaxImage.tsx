@@ -43,7 +43,7 @@ export default function ParallaxImage() {
       >
         <div className="text-center max-w-4xl">
           <motion.h2
-            className="serif text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

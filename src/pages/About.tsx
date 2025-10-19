@@ -56,7 +56,7 @@ export default function About() {
         <section className="relative py-32 bg-black text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <motion.h2
-              className="serif text-4xl md:text-6xl font-light text-center mb-20"
+              className="text-4xl md:text-6xl font-light text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

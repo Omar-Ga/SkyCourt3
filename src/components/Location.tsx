@@ -32,7 +32,7 @@ export default function Location() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
         <div className="md:pr-12">
           <motion.h2
-            className="serif text-5xl md:text-7xl font-light mb-6"
+            className="text-5xl md:text-7xl font-light mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{}}
@@ -85,7 +85,7 @@ export default function Location() {
           viewport={{}}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-white/40 serif text-2xl relative">
+          <p className="text-white/40 text-2xl relative">
             {t('interactive_map_coming_soon')}
           </p>
         </motion.div>

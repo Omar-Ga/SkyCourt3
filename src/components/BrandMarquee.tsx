@@ -22,7 +22,7 @@ export default function BrandMarquee() {
     <section className="relative py-16 overflow-hidden" id="brands">
       <div className="mb-16 text-center px-6">
         <motion.h2
-          className="serif text-5xl md:text-7xl font-light text-black mb-6"
+          className="text-5xl md:text-7xl font-light text-black mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{}}
@@ -49,7 +49,7 @@ export default function BrandMarquee() {
             {duplicatedBrands.map((brand, index) => (
               <div key={index} className="flex-shrink-0">
                 <div className="bg-white/80 backdrop-blur-sm border border-black/10 rounded-2xl px-12 py-8 shadow-lg">
-                  <span className="serif text-2xl font-medium text-black tracking-wider whitespace-nowrap">
+                  <span className="text-2xl font-medium text-black tracking-wider whitespace-nowrap">
                     {brand.name}
                   </span>
                 </div>

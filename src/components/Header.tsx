@@ -77,7 +77,7 @@ export default function Header({ show }: { show: boolean }) {
             className="flex items-center gap-3 group"
           >
             <Building2 className="w-8 h-8 text-black" strokeWidth={1.5} />
-            <span className="serif text-2xl font-semibold text-black tracking-wide">
+            <span className="text-2xl font-semibold text-black tracking-wide">
               {t('skycourt')}
             </span>
           </Link>
@@ -116,8 +116,7 @@ export default function Header({ show }: { show: boolean }) {
               item.isRoute ? (
                 <Link
                   key={item.key}
-                  to={item.href}
-                  className="serif text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
+                  className="text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {t(item.key)}
@@ -129,7 +128,7 @@ export default function Header({ show }: { show: boolean }) {
                     handleSectionScroll(item.sectionId!);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="serif text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
+                  className="text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
                 >
                   {t(item.key)}
                 </button>
@@ -137,7 +136,7 @@ export default function Header({ show }: { show: boolean }) {
             ))}
             <button
               onClick={() => { toggleLanguage(); setIsMobileMenuOpen(false); }}
-              className="serif text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
+              className="text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors"
             >
               {i18n.language === 'en' ? 'AR' : 'EN'}
             </button>

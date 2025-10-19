@@ -280,5 +280,26 @@
     ],
     "closing_title": "Welcome to SkyCourt",
     "closing_text": "Your ideal destination for shopping, entertainment, and creating unforgettable memories with family and friends"
-  }
+  },
+  "contact_us": "Contact Us",
+  "contact_us_title": "Get in Touch",
+  "contact_us_subtitle": "We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.",
+  "contact_us_name": "Your Name",
+  "contact_us_email": "Your Email",
+  "contact_us_message": "Your Message",
+  "contact_us_send": "Send Message",
+  "contact_us_sending": "Sending...",
+  "contact_us_success": "Form Submitted Successfully",
+  "email_link": "Contact Us",
+  "careers": "Careers",
+  "careers_join_our_team": "Join Our Team",
+  "careers_subtitle": "Build the future with us. Explore opportunities to grow your career and make an impact.",
+  "careers_search_placeholder": "Search by title, keyword, or department...",
+  "careers_all_departments": "All Departments",
+  "careers_all_locations": "All Locations",
+  "careers_open_positions": "Open Positions",
+  "careers_apply_now": "Apply Now",
+  "careers_dont_see_role": "Don't see the right role?",
+  "careers_send_resume": "Send us your resume",
+  "careers_link": "Careers"
 }

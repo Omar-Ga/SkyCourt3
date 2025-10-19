@@ -36,7 +36,7 @@ export default function NumberCounter({ number, label, suffix, delay = 0 }: Numb
       transition={{ duration: 0.8, delay }}
     >
       <motion.div
-        className="serif text-6xl md:text-8xl font-light mb-4"
+        className="text-6xl md:text-8xl font-light mb-4"
         initial={{ scale: 0.5 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}

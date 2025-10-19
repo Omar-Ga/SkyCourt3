@@ -25,7 +25,7 @@ export default function Dining() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="serif mb-4 text-5xl font-medium tracking-tight text-black md:text-7xl">
+          <h1 className="mb-4 text-5xl font-medium tracking-tight text-black md:text-7xl">
             {t('dining_headline')}
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-black/60">

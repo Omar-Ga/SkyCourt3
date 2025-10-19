@@ -235,5 +235,26 @@
     ],
     "closing_title": "نرحب بكم في سكاي كورت",
     "closing_text": "وجهتكم المثالية للتسوق والترفيه والاستمتاع بأوقات لا تُنسى مع العائلة والأصدقاء"
-  }
+  },
+  "contact_us": "تواصل معنا",
+  "contact_us_title": "تواصل معنا",
+  "contact_us_subtitle": "يسعدنا أن نسمع منك. يرجى ملء النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن.",
+  "contact_us_name": "اسمك",
+  "contact_us_email": "بريدك الإلكتروني",
+  "contact_us_message": "رسالتك",
+  "contact_us_send": "إرسال الرسالة",
+  "contact_us_sending": "جار الإرسال...",
+  "contact_us_success": "تم إرسال النموذج بنجاح",
+  "email_link": "تواصل معنا",
+  "careers": "الوظائف",
+  "careers_join_our_team": "انضم إلى فريقنا",
+  "careers_subtitle": "ابنِ المستقبل معنا. استكشف الفرص لتنمية حياتك المهنية وإحداث تأثير.",
+  "careers_search_placeholder": "ابحث حسب المسمى الوظيفي أو الكلمة الرئيسية أو القسم...",
+  "careers_all_departments": "كل الأقسام",
+  "careers_all_locations": "كل المواقع",
+  "careers_open_positions": "الوظائف المتاحة",
+  "careers_apply_now": "قدم الآن",
+  "careers_dont_see_role": "ألا ترى الدور المناسب؟",
+  "careers_send_resume": "أرسل لنا سيرتك الذاتية",
+  "careers_link": "الوظائف"
 }

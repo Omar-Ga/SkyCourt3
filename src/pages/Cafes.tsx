@@ -46,7 +46,7 @@ export default function Cafes() {
             <span className="text-primary font-semibold">{t('cafes_section_badge')}</span>
           </motion.div>
           
-          <h1 className="serif text-5xl md:text-7xl font-medium tracking-tight text-foreground mb-6">
+          <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-foreground mb-6">
             {t('cafes_headline_prefix')}
             <br />
             <RotatingText 
@@ -146,7 +146,7 @@ export default function Cafes() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="serif text-4xl md:text-5xl font-medium text-foreground mb-3"
+                  className="text-4xl md:text-5xl font-medium text-foreground mb-3"
                 >
                   {t(selectedCafe.nameKey)}
                 </motion.h2>
@@ -176,7 +176,7 @@ export default function Cafes() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="serif text-2xl font-medium mb-8 text-foreground"
+                  className="text-2xl font-medium mb-8 text-foreground"
                 >
                   Experience {t(selectedCafe.nameKey)}
                 </motion.h3>
