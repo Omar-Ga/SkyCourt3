@@ -62,7 +62,7 @@ export default function Careers() {
   return (
     <>
       <div className="grain-overlay" />
-      <Header show={!heroInView} />
+      <Header show={true} />
       <main>
         <CareersHeader />
         <section ref={heroRef} className="py-16 px-6 bg-gray-50">
