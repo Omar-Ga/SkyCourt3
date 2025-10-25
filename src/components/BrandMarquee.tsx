@@ -1,26 +1,22 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 
 export default function BrandMarquee() {
   const { t } = useTranslation();
   const brands = (t('brands', { returnObjects: true }) || []) as { name: string }[];
 
-  // Create a seamless loop by duplicating the brands
-  const duplicatedBrands = [...brands, ...brands];
-
-  const marqueeVariants = {
-    animate: {
-      x: [0, '-50%'],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: 'loop',
-          duration: 60, // Adjust duration for speed
-          ease: 'linear',
-        },
-      },
-    },
-  };
+  const MarqueeContent = () => (
+    <div className="flex-shrink-0 flex items-center gap-x-8">
+      {brands.map((brand, index) => (
+        <div key={index} className="flex-shrink-0">
+          <div className="bg-white/80 backdrop-blur-sm border border-black/10 rounded-2xl px-12 py-8 shadow-lg">
+            <span className="text-2xl font-medium text-black tracking-wider whitespace-nowrap">
+              {brand.name}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <section className="py-16" id="brands">
@@ -34,21 +30,12 @@ export default function BrandMarquee() {
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#fafaf8] to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#fafaf8] to-transparent z-10" />
 
-        <motion.div
-          className="flex gap-8 py-8" // Increased gap for spacing
-          variants={marqueeVariants}
-          animate="animate"
-        >
-          {duplicatedBrands.map((brand, index) => (
-            <div key={index} className="flex-shrink-0">
-              <div className="bg-white/80 backdrop-blur-sm border border-black/10 rounded-2xl px-12 py-8 shadow-lg">
-                <span className="text-2xl font-medium text-black tracking-wider whitespace-nowrap">
-                  {brand.name}
-                </span>
-              </div>
-            </div>
-          ))}
-        </motion.div>
+        <div className="w-full flex">
+          <div className="flex-shrink-0 flex animate-marquee">
+            <MarqueeContent />
+            <MarqueeContent />
+          </div>
+        </div>
       </div>
     </section>
   );
