@@ -44,9 +44,6 @@
   "iconic_brands": "Iconic brands at SkyCourt",
   "brands": [
     {
-      "name": "Ammar Auto"
-    },
-    {
       "name": "B-Tech"
     },
     {
@@ -65,16 +62,10 @@
       "name": "Fathalla Market"
     },
     {
-      "name": "Ftirty"
+      "name": "Ftirty and Friscato"
     },
     {
       "name": "Donia El Gambary"
-    },
-    {
-      "name": "Hamed El Basiony"
-    },
-    {
-      "name": "Hans"
     },
     {
       "name": "Hardees"
@@ -89,9 +80,6 @@
       "name": "Pizza Hut"
     },
     {
-      "name": "Ragab Perfumes"
-    },
-    {
       "name": "Raya"
     },
     {
@@ -101,7 +89,67 @@
       "name": "El Tahrir"
     },
     {
-      "name": "Zizo & Lavish"
+      "name": "Darak"
+    },
+    {
+      "name": "Noor nails"
+    },
+    {
+      "name": "Pets spot"
+    },
+    {
+      "name": "Al Mokhtabar"
+    },
+    {
+      "name": "NSA Lab"
+    },
+    {
+      "name": "Masr aswan fish food"
+    },
+    {
+      "name": "Bravo minimarket"
+    },
+    {
+      "name": "Bella ciao"
+    },
+    {
+      "name": "Zatona"
+    },
+    {
+      "name": "Nefertity perfumes"
+    },
+    {
+      "name": "Shal sewa"
+    },
+    {
+      "name": "Leather house"
+    },
+    {
+      "name": "Bta3 el ward"
+    },
+    {
+      "name": "Vape station"
+    },
+    {
+      "name": "Doctor sushi"
+    },
+    {
+      "name": "Al madina al monawara"
+    },
+    {
+      "name": "Pinata kids area"
+    },
+    {
+      "name": "Al forsan"
+    },
+    {
+      "name": "Hopsy"
+    },
+    {
+      "name": "Al ezaby beauty"
+    },
+    {
+      "name": "Sarah pharmacy"
     }
   ],
   "services": [
