@@ -78,7 +78,6 @@ function InfiniteMarquee({
  */
 export default function BrandMarquee() {
   const { t, i18n } = useTranslation();
-  const isRtl = i18n.dir() === 'rtl';
   const brands = (t("brands", { returnObjects: true }) as { name: string }[]).map(
     (b) => b.name
   );

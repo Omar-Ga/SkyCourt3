@@ -48,6 +48,64 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* RTL Support */
+  [dir="rtl"] .rtl\:text-left {
+    text-align: left;
+  }
+
+  [dir="rtl"] .rtl\:text-right {
+    text-align: right;
+  }
+
+  [dir="rtl"] .rtl\:mr-auto {
+    margin-right: auto;
+  }
+
+  [dir="rtl"] .rtl\:ml-auto {
+    margin-left: auto;
+  }
+
+  [dir="rtl"] .rtl\:space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+
+  /* Arabic font optimization */
+  [dir="rtl"] {
+    font-family: 'Alan Sans', 'Noto Sans Arabic', 'Amiri', sans-serif;
+    line-height: 1.7;
+  }
+
+  /* Ensure proper text rendering for Arabic */
+  [dir="rtl"] p,
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6 {
+    direction: rtl;
+  }
+
+
+
+  /* Fix button and form alignment in RTL */
+  [dir="rtl"] button {
+    text-align: center; /* Buttons should be centered by default */
+  }
+  
+  [dir="rtl"] input,
+  [dir="rtl"] textarea,
+  [dir="rtl"] select {
+    text-align: right;
+  }
+
+
+
+  /* Ensure proper spacing for RTL layouts */
+  [dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
 }
 
 @keyframes gradient-shift {
@@ -90,33 +148,7 @@ body {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
-@keyframes draw-line {
-  from {
-    height: 0;
-    opacity: 0;
-  }
-  to {
-    height: 60px;
-    opacity: 1;
-  }
-}
 
-.draw-line {
-  animation: draw-line 2s ease-in-out infinite;
-}
-
-@keyframes pulse-gentle {
-  0%, 100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-.pulse-gentle {
-  animation: pulse-gentle 2s ease-in-out infinite;
-}
 
 
 /* Marquee animations */
@@ -141,6 +173,51 @@ body {
   100% { transform: translateX(0%); }
 }
 
+/* Mobile hero height fix */
+.mobile-hero-height {
+  height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height when supported */
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* On mobile devices, ensure hero doesn't exceed viewport */
+@media (max-width: 768px) {
+  .mobile-hero-height {
+    height: 100vh;
+    max-height: 100vh;
+    padding-top: 70px; /* Smaller padding for mobile header */
+  }
+  
+  /* Support for newer browsers with dynamic viewport */
+  @supports (height: 100dvh) {
+    .mobile-hero-height {
+      height: 100dvh;
+      max-height: 100dvh;
+    }
+  }
+}
+
+/* Desktop hero height */
+@media (min-width: 769px) {
+  .mobile-hero-height {
+    padding-top: 90px; /* More space for desktop header */
+  }
+}
+
+/* Mobile section spacing fixes */
+@media (max-width: 768px) {
+  /* Ensure sections don't overlap on mobile */
+  section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Add proper spacing between sections on mobile */
+  section + section {
+    margin-top: 0;
+  }
+}
+
 /* Mobile touch improvements */
 @media (max-width: 768px) {
   button, a, [role="button"] {
@@ -152,7 +229,7 @@ body {
   
   /* Ensure clickable elements have proper spacing */
   .mobile-touch-target {
-    padding: 12px;
-    margin: 4px;
+    padding: 8px;
+    margin: 2px;
   }
 }

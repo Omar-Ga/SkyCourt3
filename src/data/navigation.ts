@@ -14,6 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
   { key: 'dining', href: '/dining', isRoute: true },
   { key: 'cafes', href: '/cafes', isRoute: true },
   { key: 'about_us', href: '/about', isRoute: true },
+  { key: 'rentals', href: '/rentals', isRoute: true },
   { key: 'contact_us', href: '/contact-us', isRoute: true },
 
 

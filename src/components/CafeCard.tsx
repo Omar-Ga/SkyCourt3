@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Phone, Star, Clock, MapPin } from 'lucide-react';
@@ -7,12 +8,11 @@ interface CafeCardProps {
   cafe: Cafe;
   index: number;
   setSelectedCafe: (cafe: Cafe) => void;
-  isHovered?: boolean;
-  onHover?: (id: string | null) => void;
 }
 
-export default function CafeCard({ cafe, index, setSelectedCafe, isHovered, onHover }: CafeCardProps) {
+export default function CafeCard({ cafe, index, setSelectedCafe }: CafeCardProps) {
   const { t } = useTranslation();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
@@ -25,8 +25,8 @@ export default function CafeCard({ cafe, index, setSelectedCafe, isHovered, onHo
         type: "spring",
         stiffness: 100
       }}
-      onHoverStart={() => onHover?.(cafe.id)}
-      onHoverEnd={() => onHover?.(null)}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
       className="group cursor-pointer"
       onClick={() => setSelectedCafe(cafe)}
     >

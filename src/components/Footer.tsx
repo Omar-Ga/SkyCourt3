@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Building2, Instagram, Facebook, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '../hooks/use-mobile';
-import clsx from 'clsx';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -22,10 +21,7 @@ export default function Footer() {
     transition: { duration: 0.8, delay },
   });
 
-  const linkClasses = clsx(
-    "text-white/60 hover:text-primary",
-    !isMobile && "transition-colors"
-  );
+  const linkClasses = "text-white/60 hover:text-primary transition-colors";
 
   return (
     <footer className="relative py-20 px-6 bg-black text-white overflow-hidden">
@@ -125,9 +121,9 @@ export default function Footer() {
             {t('copyright')}
           </p>
           <div className="flex gap-6">
-            <a href="#" className={clsx("text-white/40 hover:text-primary text-sm", !isMobile && "transition-colors")}>
+            <a href="#" className="text-white/40 hover:text-primary text-sm transition-colors">
             </a>
-            <a href="#" className={clsx("text-white/40 hover:text-primary text-sm", !isMobile && "transition-colors")}>
+            <a href="#" className="text-white/40 hover:text-primary text-sm transition-colors">
               {t('terms_of_service')}
             </a>
           </div>

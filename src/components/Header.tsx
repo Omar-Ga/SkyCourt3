@@ -71,7 +71,7 @@ export default function Header({ show }: { show: boolean }) {
           <div className="frosted-glass h-full border-b border-black/5" />
         </motion.div>
 
-        <div className="relative max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="relative max-w-7xl mx-auto px-4 flex items-center justify-between">
           <Link
             to="/"
             className="flex items-center gap-3 group"
@@ -113,13 +113,13 @@ export default function Header({ show }: { show: boolean }) {
           exit={{ opacity: 0 }}
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <nav className="flex flex-col items-center gap-8" onClick={(e) => e.stopPropagation()}>
+          <nav className="flex flex-col items-center gap-6" onClick={(e) => e.stopPropagation()}>
             {NAV_ITEMS.map((item) => (
               item.isRoute ? (
                 <Link
                   key={item.key}
                   to={item.href}
-                  className="text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors mobile-touch-target"
+                  className="text-lg sm:text-xl text-black/80 hover:text-black transition-colors mobile-touch-target"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {t(item.key)}
@@ -131,7 +131,7 @@ export default function Header({ show }: { show: boolean }) {
                     handleSectionScroll(item.sectionId!);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors mobile-touch-target"
+                  className="text-lg sm:text-xl text-black/80 hover:text-black transition-colors mobile-touch-target"
                 >
                   {t(item.key)}
                 </button>
@@ -139,7 +139,7 @@ export default function Header({ show }: { show: boolean }) {
             ))}
             <button
               onClick={() => { toggleLanguage(); setIsMobileMenuOpen(false); }}
-              className="text-2xl sm:text-3xl text-black/80 hover:text-black transition-colors mobile-touch-target"
+              className="text-lg sm:text-xl text-black/80 hover:text-black transition-colors mobile-touch-target"
             >
               {i18n.language === 'en' ? 'AR' : 'EN'}
             </button>

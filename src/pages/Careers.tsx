@@ -1,50 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useInView } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CareersHeader from '../components/careers/CareersHeader';
 import JobCard from '../components/careers/JobCard';
-import { JOBS } from '../data/jobs';
-import { useInView } from 'framer-motion';
+import { JOBS, type Job } from '../data/jobs';
 
-// Custom hook for fade-in effect
-function useFadeIn<T extends HTMLElement>() {
-  const ref = useRef<T>(null);
-  const [isVisible, setIsVisible] = React.useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  return { ref, isVisible };
-}
-
-
-const AnimatedJobCard = ({ job, index }: { job: any; index: number }) => {
-    const { ref, isVisible } = useFadeIn<HTMLDivElement>();
+const AnimatedJobCard = ({ job, index }: { job: Job; index: number }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: '-10%' });
+    
     return (
         <div
             ref={ref}
-            className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: `${index * 100}ms` }}
         >
             <JobCard job={job} />
@@ -56,7 +26,6 @@ const AnimatedJobCard = ({ job, index }: { job: any; index: number }) => {
 export default function Careers() {
   const { t } = useTranslation();
   const heroRef = useRef<HTMLElement>(null);
-  const heroInView = useInView(heroRef, { margin: '-50% 0px -50% 0px' });
 
 
   return (

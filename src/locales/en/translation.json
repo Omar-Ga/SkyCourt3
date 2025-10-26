@@ -342,12 +342,159 @@
   "careers": "Careers",
   "careers_join_our_team": "Join Our Team",
   "careers_subtitle": "Build the future with us. Explore opportunities to grow your career and make an impact.",
-  "careers_search_placeholder": "Search by title, keyword, or department...",
-  "careers_all_departments": "All Departments",
-  "careers_all_locations": "All Locations",
+
   "careers_open_positions": "Open Positions",
   "careers_apply_now": "Apply Now",
   "careers_dont_see_role": "Don't see the right role?",
   "careers_send_resume": "Send us your resume",
-  "careers_link": "Careers"
+  "careers_link": "Careers",
+  "rentals": "Rentals",
+  "rentals_page": {
+    "hero": {
+      "title": "Your Business Deserves the Best Location",
+      "subtitle": "Join the most successful shopping destination on the North Coast",
+      "cta_primary": "Start Your Inquiry",
+      "cta_secondary": "Learn More"
+    },
+    "location": {
+      "badge": "Strategic Location",
+      "title": "In the Heart of the North Coast",
+      "description": "SkyCourt Mall is strategically located on the Alexandria-Marsa Matrouh road at kilometer 137, making it the premier destination for tourists and residents alike.",
+      "features": [
+        "Kilometer 136 Alexandria-Marsa Matrouh Road",
+        "Directly opposite tourist villages",
+        "Largest mall on the North Coast",
+        "Easy accessibility for customers and suppliers"
+      ]
+    },
+
+
+    "facilities": {
+      "badge": "World-Class Facilities",
+      "title": "Everything Your Business Needs",
+      "items": [
+        {
+          "title": "Parking Spaces",
+          "description": "Parking spaces for more than 1000 cars managed by a specialized company."
+        },
+        {
+          "title": "Green Spaces",
+          "description": "Very large green spaces for relaxation and enjoyment."
+        },
+        {
+          "title": "Water Features",
+          "description": "Beautiful water fountains that add an aesthetic touch to the place."
+        },
+        {
+          "title": "Maintenance Team",
+          "description": "24-hour maintenance (plumbing, electricity, landscaping)."
+        },
+        {
+          "title": "Professional Security",
+          "description": "Professional and specialized security company to ensure everyone's safety."
+        },
+        {
+          "title": "Modern Management",
+          "description": "Modern management methods for dealing with tenants."
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Frequently Asked Questions",
+      "title": "Everything You Need to Know",
+      "items": [
+        {
+          "question": "What is the lease term?",
+          "answer": "Leasing is done with annual contracts or more depending on the area, distinction and location within the mall."
+        },
+        {
+          "question": "What spaces are currently available?",
+          "answer": "Various and different spaces are available, from medium to large, according to the tenant's desire and the nature of the commercial activity."
+        },
+        {
+          "question": "Is there marketing support for tenants?",
+          "answer": "Yes, we provide all services and facilities for tenants, including marketing support through mall advertising campaigns and ongoing events."
+        },
+        {
+          "question": "How is maintenance handled?",
+          "answer": "We have a maintenance team of the most skilled technicians working around the clock to ensure any problem related to plumbing, electricity, or landscaping is resolved immediately."
+        },
+        {
+          "question": "Who are the current tenants?",
+          "answer": "We are proud to host major international and famous local companies and brands, creating a rich and diverse business environment."
+        },
+        {
+          "question": "How can I view the spaces?",
+          "answer": "You can contact us directly through the inquiry form or the phone numbers shown to arrange a private tour of the mall."
+        }
+      ]
+    },
+    "inquiry_form": {
+      "badge": "Get Started",
+      "title": "Ready to Join SkyCourt?",
+      "subtitle": "Fill out the form below and our team will contact you within 24 hours to discuss your business needs.",
+      "interested_title": "Interested in Renting?",
+      "interested_description": "Use our contact form to send your inquiry with all required details. Our sales team will respond to you as soon as possible.",
+      "send_detailed_inquiry": "Send Detailed Inquiry",
+      "or_contact_directly": "Or contact us directly through the methods below",
+      "direct_contact_methods": "Direct Contact Methods",
+      "whatsapp": "WhatsApp",
+      "chat_directly": "Chat with us directly",
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location",
+      "location_address": "SkyCourt Mall - North Coast",
+      "fields": {
+        "full_name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "business_type": "Business Type",
+        "space_requirement": "Space Requirement",
+        "message": "Additional Information"
+      },
+      "space_options": {
+        "small": "Small (50-100 sqm)",
+        "medium": "Medium (100-200 sqm)",
+        "large": "Large (200+ sqm)",
+        "undecided": "I'm not sure yet"
+      },
+      "placeholders": {
+        "full_name": "Enter your full name",
+        "email": "Enter your email address",
+        "phone": "Enter your phone number",
+        "business_type": "e.g., Restaurant, Retail, Services",
+        "message": "Tell us about your business and requirements"
+      },
+      "submit": "Submit Inquiry",
+      "submitting": "Submitting...",
+      "success": "Thank you! We'll contact you within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    },
+    "final_cta": {
+      "title": "Ready to Grow Your Business?",
+      "subtitle": "Join the most successful shopping destination on the North Coast and watch your business thrive.",
+      "cta": "Start Your Journey Today"
+    },
+    "whatsapp": {
+      "text": "Chat with us on WhatsApp"
+    },
+    "facilities_grid": {
+      "title": "World-Class Facilities",
+      "subtitle": "Enjoy advanced and integrated facilities that ensure comfort and ease of work in a professional environment."
+    },
+    "faq_section": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about rental opportunities at SkyCourt Mall. Didn't find your answer? Contact us directly.",
+      "contact_us_button": "Contact Us"
+    },
+    "final_cta_section": {
+      "title": "Ready to be part of the largest mall on the North Coast?",
+      "subtitle": "SkyCourt Mall was designed with the comfort and enjoyment of shoppers in mind, offering the best services to tenants. Join us today.",
+      "primary_button": "Talk to the Sales Team Now",
+      "secondary_button": "Book a Tour of the Mall"
+    },
+    "floating_whatsapp_button": {
+      "inquire_now": "Inquire Now"
+    }
+  }
 }
