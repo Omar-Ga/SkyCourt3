@@ -38,7 +38,12 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4"
       onClick={onClose}
     >
-      <button onClick={onClose} className="absolute top-6 right-6 z-50 rounded-full bg-white/20 p-2 text-white transition-all hover:bg-white/30 hover:scale-110" aria-label="Close">
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 z-50 rounded-full bg-white/20 p-3 text-white transition-all hover:bg-white/30 hover:scale-110 touch-manipulation"
+        aria-label="Close"
+        onTouchStart={() => { }} // Ensure touch events work
+      >
         <X className="h-6 w-6" />
       </button>
 
@@ -74,7 +79,12 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
           style={{ width: isMobile ? 'calc(100vw - 32px)' : 200 }}
         >
           <div className="w-44 h-44 flex-shrink-0 flex items-center justify-center">
-            <img src={eatery.logoUrl} alt={eatery.name} className="h-full w-full object-contain" />
+            <img
+              src={eatery.logoUrl}
+              alt={t(eatery.nameKey)}
+              className="h-full w-full object-contain"
+              style={{ imageRendering: 'crisp-edges' }}
+            />
           </div>
 
           <AnimatePresence>
@@ -88,7 +98,14 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
               >
                 <div ref={contentRef} className="w-full flex flex-col items-center">
                   <h2 className="text-2xl font-medium text-white mb-0.5 text-center">{t(eatery.nameKey)}</h2>
-                  <a href={`tel:${eatery.phone}`} className="inline-flex items-center gap-1.5 rounded-full font-semibold text-sm px-3" style={{ color: 'hsl(292.98deg 100% 50%)', backgroundColor: 'rgba(0, 0, 0, 0.2)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.3)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'}>
+                  <a
+                    href={`tel:${eatery.phone}`}
+                    className="inline-flex items-center gap-1.5 rounded-full font-semibold text-sm px-3 py-2 touch-manipulation"
+                    style={{ color: 'hsl(292.98deg 100% 50%)', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.3)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'}
+                    onTouchStart={() => { }} // Ensure touch events work
+                  >
                     <Phone className="h-3.5 w-3.5" /> {eatery.phone}
                   </a>
 

@@ -129,3 +129,30 @@ body {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0%); }
 }
+
+/* RTL Marquee animations */
+@keyframes marquee-left-rtl {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(50%); }
+}
+
+@keyframes marquee-right-rtl {
+  0% { transform: translateX(50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+  button, a, [role="button"] {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+  }
+  
+  /* Ensure clickable elements have proper spacing */
+  .mobile-touch-target {
+    padding: 12px;
+    margin: 4px;
+  }
+}

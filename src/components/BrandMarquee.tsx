@@ -12,14 +12,28 @@ function InfiniteMarquee({
   direction?: "left" | "right";
   speed?: number;
 }) {
+  const { i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
+  
+  // Determine animation based on direction and RTL
+  const getAnimation = () => {
+    if (isRtl) {
+      return direction === "left" 
+        ? `marquee-left-rtl ${speed}s linear infinite`
+        : `marquee-right-rtl ${speed}s linear infinite`;
+    } else {
+      return direction === "left"
+        ? `marquee-left ${speed}s linear infinite`
+        : `marquee-right ${speed}s linear infinite`;
+    }
+  };
+
   return (
     <div className="relative overflow-hidden">
       <div
         className="flex gap-16 py-6"
         style={{
-          animation: direction === "left"
-            ? `marquee-left ${speed}s linear infinite`
-            : `marquee-right ${speed}s linear infinite`,
+          animation: getAnimation(),
           width: 'max-content'
         }}
       >
@@ -63,7 +77,8 @@ function InfiniteMarquee({
  * Main section with two marquees moving in opposite directions.
  */
 export default function BrandMarquee() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
   const brands = (t("brands", { returnObjects: true }) as { name: string }[]).map(
     (b) => b.name
   );
@@ -77,6 +92,7 @@ export default function BrandMarquee() {
     <section
       id="brands"
       className="relative py-20 bg-[#fafaf8] overflow-hidden"
+      dir={i18n.dir()}
     >
       <div className="text-center mb-16">
         <h2 className="text-5xl md:text-7xl font-light text-black mb-6">

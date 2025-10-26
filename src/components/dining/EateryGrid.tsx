@@ -23,7 +23,12 @@ export const EateryLogoGrid = ({ eateries, onEateryClick }: EateryLogoGridProps)
           className="cursor-pointer aspect-square rounded-2xl bg-white p-6 shadow-lg transition-shadow hover:shadow-2xl flex flex-col"
         >
           <div className="flex-grow flex h-full w-full items-center justify-center">
-            <img src={eatery.logoUrl} alt={t(eatery.nameKey)} className="h-full w-full object-contain" />
+            <img 
+              src={eatery.logoUrl} 
+              alt={t(eatery.nameKey)} 
+              className="h-full w-full object-contain"
+              style={{ imageRendering: 'crisp-edges' }}
+            />
           </div>
           <p className="text-center font-semibold mt-4">{t(eatery.nameKey)}</p>
         </motion.div>

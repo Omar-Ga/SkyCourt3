@@ -91,8 +91,9 @@ export default function Cafes() {
               }}
               onHoverStart={() => setHoveredCard(cafe.id)}
               onHoverEnd={() => setHoveredCard(null)}
-              className="group cursor-pointer"
+              className="group cursor-pointer touch-manipulation"
               onClick={() => setSelectedCafe(cafe)}
+              onTouchStart={() => {}} // Ensure touch events work
             >
               <div className="relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 {/* Logo Section */}
@@ -210,9 +211,10 @@ export default function Cafes() {
           >
             <motion.button
               onClick={() => setSelectedCafe(null)}
-              className="absolute top-6 right-6 z-50 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-all duration-300"
+              className="absolute top-6 right-6 z-50 rounded-full bg-white/10 hover:bg-white/20 p-3 text-white transition-all duration-300 touch-manipulation"
               whileHover={{ scale: 1.1, rotate: 90 }}
               whileTap={{ scale: 0.9 }}
+              onTouchStart={() => {}} // Ensure touch events work
             >
               <X className="h-6 w-6" />
             </motion.button>
@@ -266,7 +268,8 @@ export default function Cafes() {
                 >
                   <a
                     href={`tel:${selectedCafe.phone}`}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-all duration-300 transform hover:scale-105"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-all duration-300 transform hover:scale-105 touch-manipulation"
+                    onTouchStart={() => {}} // Ensure touch events work
                   >
                     <Phone className="h-4 w-4" />
                     {selectedCafe.phone}

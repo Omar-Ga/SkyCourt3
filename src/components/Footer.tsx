@@ -100,7 +100,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className={linkClasses}>
+                  <a href="tel:+1234567890" className={linkClasses}>
                     {t('call_link')}
                   </a>
                 </li>
