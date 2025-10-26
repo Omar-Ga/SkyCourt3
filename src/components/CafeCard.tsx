@@ -1,103 +1,119 @@
-import { motion, useTransform, MotionValue } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Phone } from 'lucide-react';
+import { Phone, Star, Clock, MapPin } from 'lucide-react';
 import { Cafe } from '../data/cafes';
 
 interface CafeCardProps {
   cafe: Cafe;
   index: number;
-  scrollYProgress: MotionValue<number>;
   setSelectedCafe: (cafe: Cafe) => void;
+  isHovered?: boolean;
+  onHover?: (id: string | null) => void;
 }
 
-export default function CafeCard({ cafe, index, scrollYProgress, setSelectedCafe }: CafeCardProps) {
+export default function CafeCard({ cafe, index, setSelectedCafe, isHovered, onHover }: CafeCardProps) {
   const { t } = useTranslation();
-  const y = useTransform(scrollYProgress, [0, 1], [100 * (index * 0.1), -50 * (index * 0.1)]);
 
   return (
     <motion.div
-      key={cafe.id}
-      initial={{ opacity: 0, y: 50, rotateX: 15 }}
-      whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ 
-        duration: 0.8,
-        delay: index * 0.2,
+        duration: 0.6, 
+        delay: index * 0.1,
         type: "spring",
         stiffness: 100
       }}
-      style={{ y }}
-      className="group cursor-pointer perspective-1000"
+      onHoverStart={() => onHover?.(cafe.id)}
+      onHoverEnd={() => onHover?.(null)}
+      className="group cursor-pointer"
       onClick={() => setSelectedCafe(cafe)}
     >
-      <motion.div
-        whileHover={{ y: -10, rotateY: 5, scale: 1.02 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="relative bg-card rounded-3xl overflow-hidden shadow-luxury transform-gpu"
-      >
-        {/* Logo Section with Gradient Overlay */}
-        <div className="relative h-80 bg-gradient-to-br from-primary/5 via-secondary/10 to-accent/5 flex items-center justify-center p-12">
+      <div className="relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+        {/* Logo Section */}
+        <div className="relative h-64 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 flex items-center justify-center p-8">
           <motion.div
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            className="relative z-10 w-full h-full"
+            animate={{
+              scale: isHovered ? 1.1 : 1,
+              rotate: isHovered ? 5 : 0,
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="relative z-10 w-32 h-32"
           >
-            <img 
-              src={cafe.logoUrl} 
+            <img
+              src={cafe.logoUrl}
               alt={t(cafe.nameKey)}
-              loading="lazy"
-              className="w-full h-full object-contain drop-shadow-2xl"
+              className="w-full h-full object-contain drop-shadow-lg"
             />
           </motion.div>
           
-          {/* Animated gradient orb */}
+          {/* Animated background pattern */}
           <motion.div
-            className="absolute inset-0 bg-gradient-radial from-primary/20 via-transparent to-transparent"
+            className="absolute inset-0 opacity-20"
             animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
+              backgroundPosition: isHovered ? "100% 100%" : "0% 0%",
             }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 2 }}
+            style={{
+              backgroundImage: "radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.3) 0%, transparent 50%)",
+              backgroundSize: "100% 100%",
+            }}
           />
         </div>
 
-        {/* Content Section */}
-        <div className="p-8 space-y-4">
-          <motion.h3 
-            className="text-3xl font-medium text-foreground group-hover:text-primary transition-colors"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 + index * 0.1 }}
-          >
-            {t(cafe.nameKey)}
-          </motion.h3>
-          
-          <motion.p 
-            className="text-muted-foreground text-sm leading-relaxed"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 + index * 0.1 }}
-          >
-            {t(cafe.taglineKey)}
-          </motion.p>
+        {/* Content */}
+        <div className="p-6 space-y-4">
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                {t(cafe.nameKey)}
+              </h3>
+              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                {t(cafe.taglineKey)}
+              </p>
+            </div>
+            <motion.div
+              animate={{
+                rotate: isHovered ? 360 : 0,
+              }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-1 text-amber-500"
+            >
+              <Star className="w-4 h-4 fill-current" />
+              <Star className="w-4 h-4 fill-current" />
+              <Star className="w-4 h-4 fill-current" />
+              <Star className="w-4 h-4 fill-current" />
+              <Star className="w-4 h-4 fill-current" />
+            </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 + index * 0.1 }}
-            className="flex items-center gap-2 text-primary"
-          >
-            <Phone className="w-4 h-4" />
-            <span className="text-sm font-semibold">{cafe.phone}</span>
-          </motion.div>
+          <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <div className="flex items-center gap-1">
+              <Phone className="w-4 h-4" />
+              <span>{cafe.phone}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>8AM - 10PM</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+            <MapPin className="w-4 h-4" />
+            <span className="text-sm">SkyCourt Mall, Level 2</span>
+          </div>
 
           {/* Hover indicator */}
-          <motion.div 
-            className="pt-4 flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity"
-            initial={{ x: -10 }}
-            whileInView={{ x: 0 }}
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{
+              opacity: isHovered ? 1 : 0,
+              x: isHovered ? 0 : -10,
+            }}
+            className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-medium text-sm pt-2"
           >
-            <span>Explore menu & ambiance</span>
+            <span>Explore menu & gallery</span>
             <motion.span
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -107,9 +123,10 @@ export default function CafeCard({ cafe, index, scrollYProgress, setSelectedCafe
           </motion.div>
         </div>
 
-        {/* Decorative corner accent */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full" />
-      </motion.div>
+        {/* Decorative elements */}
+        <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-amber-200/30 to-orange-300/30 rounded-full blur-xl" />
+        <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-tr from-blue-200/20 to-purple-300/20 rounded-full blur-lg" />
+      </div>
     </motion.div>
   );
 }

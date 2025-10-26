@@ -1,42 +1,97 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-export default function BrandMarquee() {
-  const { t } = useTranslation();
-  const brands = (t('brands', { returnObjects: true }) || []) as { name: string }[];
-
-  const MarqueeContent = () => (
-    <div className="flex-shrink-0 flex items-center gap-x-8">
-      {brands.map((brand, index) => (
-        <div key={index} className="flex-shrink-0">
-          <div className="bg-white/80 backdrop-blur-sm border border-black/10 rounded-2xl px-12 py-8 shadow-lg">
-            <span className="text-2xl font-medium text-black tracking-wider whitespace-nowrap">
-              {brand.name}
+/**
+ * Pure CSS infinite marquee - actually works
+ */
+function InfiniteMarquee({
+  items,
+  direction = "left",
+  speed = 20, // seconds for full cycle
+}: {
+  items: string[];
+  direction?: "left" | "right";
+  speed?: number;
+}) {
+  return (
+    <div className="relative overflow-hidden">
+      <div
+        className="flex gap-16 py-6"
+        style={{
+          animation: direction === "left"
+            ? `marquee-left ${speed}s linear infinite`
+            : `marquee-right ${speed}s linear infinite`,
+          width: 'max-content'
+        }}
+      >
+        {/* First set */}
+        {items.map((item, i) => (
+          <div
+            key={`first-${i}`}
+            className="flex-shrink-0 bg-gradient-to-br from-slate-300 via-slate-200 to-slate-400 backdrop-blur-sm border border-slate-400/30 rounded-2xl px-12 py-8 shadow-lg"
+            style={{
+              background: 'linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 25%, #b8b8b8 50%, #d0d0d0 75%, #a8a8a8 100%)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4)'
+            }}
+          >
+            <span className="text-2xl font-medium text-slate-800 whitespace-nowrap">
+              {item}
             </span>
           </div>
-        </div>
-      ))}
+        ))}
+
+        {/* Second set for seamless loop */}
+        {items.map((item, i) => (
+          <div
+            key={`second-${i}`}
+            className="flex-shrink-0 bg-gradient-to-br from-slate-300 via-slate-200 to-slate-400 backdrop-blur-sm border border-slate-400/30 rounded-2xl px-12 py-8 shadow-lg"
+            style={{
+              background: 'linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 25%, #b8b8b8 50%, #d0d0d0 75%, #a8a8a8 100%)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4)'
+            }}
+          >
+            <span className="text-2xl font-medium text-slate-800 whitespace-nowrap">
+              {item}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
+}
+
+/**
+ * Main section with two marquees moving in opposite directions.
+ */
+export default function BrandMarquee() {
+  const { t } = useTranslation();
+  const brands = (t("brands", { returnObjects: true }) as { name: string }[]).map(
+    (b) => b.name
+  );
+
+  // Split brands between the two marquees
+  const midpoint = Math.ceil(brands.length / 2);
+  const firstRowBrands = brands.slice(0, midpoint);
+  const secondRowBrands = brands.slice(midpoint);
 
   return (
-    <section className="py-16" id="brands">
-      <div className="mb-12 text-center px-6">
+    <section
+      id="brands"
+      className="relative py-20 bg-[#fafaf8] overflow-hidden"
+    >
+      <div className="text-center mb-16">
         <h2 className="text-5xl md:text-7xl font-light text-black mb-6">
-          {t('iconic_brands')}
+          {t("iconic_brands")}
         </h2>
       </div>
-      <div className="relative w-full overflow-hidden">
-        {/* Gradient Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#fafaf8] to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#fafaf8] to-transparent z-10" />
 
-        <div className="w-full flex">
-          <div className="flex-shrink-0 flex animate-marquee">
-            <MarqueeContent />
-            <MarqueeContent />
-          </div>
-        </div>
+      <div className="space-y-10">
+        <InfiniteMarquee items={firstRowBrands} direction="left" speed={35} />
+        <InfiniteMarquee items={secondRowBrands} direction="right" speed={40} />
       </div>
+
+      {/* Subtle fade edges for polish */}
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#fafaf8] to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#fafaf8] to-transparent z-10" />
     </section>
   );
 }

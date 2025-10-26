@@ -7,7 +7,7 @@ import { useIsMobile } from '../../hooks/use-mobile';
 
 interface Props { eatery: Eatery; onClose: () => void; }
 
-const CARD_RADIUS = 320; // Radius for desktop "petal" animation
+const CARD_RADIUS = 220; // Radius for desktop "petal" animation
 
 export const EateryDetailModal = ({ eatery, onClose }: Props) => {
   const { t } = useTranslation();
@@ -18,7 +18,10 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
 
   const calculatePosition = (index: number, total: number) => {
     const angle = (index / total) * 2 * Math.PI - Math.PI / 2;
-    return { x: Math.cos(angle) * CARD_RADIUS, y: Math.sin(angle) * CARD_RADIUS };
+    // Use larger radius for top (index 0) and bottom (index 2) images
+    const isTopOrBottom = index === 0 || index === 2;
+    const radius = isTopOrBottom ? CARD_RADIUS + 15 : CARD_RADIUS;
+    return { x: Math.cos(angle) * radius, y: Math.sin(angle) * radius };
   };
 
   useLayoutEffect(() => {
@@ -39,7 +42,7 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
         <X className="h-6 w-6" />
       </button>
 
-      <div className="relative flex items-center justify-center w-full h-full" onClick={(e) => e.stopPropagation()}>
+      <div className="relative flex items-center justify-center w-full h-full">
         <AnimatePresence>
           {isDetailsVisible && !isMobile && (
             <motion.div>
@@ -49,12 +52,12 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
                   <motion.div
                     key={index} className="absolute top-1/2 left-1/2"
                     initial={{ opacity: 0, scale: 0.3, x: 0, y: 0 }}
-                    animate={{ opacity: 1, scale: 1, x: x - 140, y: y - 160, transition: { type: 'spring', damping: 18, stiffness: 120, delay: 0.3 + index * 0.1 } }}
+                    animate={{ opacity: 1, scale: 1, x: x - 100, y: y - 100, transition: { type: 'spring', damping: 18, stiffness: 120, delay: 0.3 + index * 0.1 } }}
                     exit={{ opacity: 0, scale: 0.3, x: 0, y: 0, transition: { duration: 0.2 } }}
+                    onClick={(e) => e.stopPropagation()}
                   >
-                    <div className="w-[280px] h-[320px] bg-white rounded-2xl overflow-hidden shadow-2xl">
-                      <img src={detail.imageUrl} alt="" className="h-3/5 w-full object-cover" />
-                      <p className="p-4 text-sm">{t(detail.descriptionKey)}</p>
+                    <div className="w-[200px] h-[200px] bg-white rounded-2xl overflow-hidden shadow-2xl">
+                      <img src={detail.imageUrl} alt="" className="h-full w-full object-cover" />
                     </div>
                   </motion.div>
                 );
@@ -65,11 +68,12 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
 
         <motion.div
           layoutId={`eatery-container-${eatery.id}`}
-          className="relative z-20 flex flex-col items-center overflow-hidden rounded-2xl bg-white shadow-2xl"
+          className="relative z-20 flex flex-col items-center"
           onLayoutAnimationComplete={() => setIsDetailsVisible(true)}
-          style={{ width: isMobile ? 'calc(100vw - 32px)' : 250 }}
+          onClick={(e) => e.stopPropagation()}
+          style={{ width: isMobile ? 'calc(100vw - 32px)' : 200 }}
         >
-          <div className="w-48 h-48 flex-shrink-0 flex items-center justify-center p-6">
+          <div className="w-44 h-44 flex-shrink-0 flex items-center justify-center">
             <img src={eatery.logoUrl} alt={eatery.name} className="h-full w-full object-contain" />
           </div>
 
@@ -82,12 +86,12 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
                 transition={{ type: 'spring', stiffness: 150, damping: 20 }}
                 className="w-full overflow-hidden"
               >
-                <div ref={contentRef} className="w-full flex flex-col items-center px-4 pb-4">
-                  <h2 className="text-3xl font-medium text-black mb-1 text-center">{t(eatery.nameKey)}</h2>
-                  <a href={`tel:${eatery.phone}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold hover:bg-primary/20">
-                    <Phone className="h-4 w-4" /> {eatery.phone}
+                <div ref={contentRef} className="w-full flex flex-col items-center">
+                  <h2 className="text-2xl font-medium text-white mb-0.5 text-center">{t(eatery.nameKey)}</h2>
+                  <a href={`tel:${eatery.phone}`} className="inline-flex items-center gap-1.5 rounded-full font-semibold text-sm px-3" style={{ color: 'hsl(292.98deg 100% 50%)', backgroundColor: 'rgba(0, 0, 0, 0.2)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.3)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'}>
+                    <Phone className="h-3.5 w-3.5" /> {eatery.phone}
                   </a>
-                  
+
 
                   {isMobile && (
                     <div className="mt-6 w-full space-y-4 max-h-[calc(100vh-450px)] overflow-y-auto p-1">
@@ -97,9 +101,8 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0, transition: { delay: 0.3 + index * 0.1 } }}
                         >
-                           <div className="w-full bg-neutral-100 rounded-xl overflow-hidden shadow">
+                          <div className="w-full bg-neutral-100 rounded-xl overflow-hidden shadow">
                             <img src={detail.imageUrl} alt="" className="h-40 w-full object-cover" />
-                            <p className="p-3 text-sm">{t(detail.descriptionKey)}</p>
                           </div>
                         </motion.div>
                       ))}

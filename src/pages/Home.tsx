@@ -1,18 +1,31 @@
 // src/pages/Home.tsx
 
+import BrandMarquee from '../components/BrandMarquee';
+
 import { useEffect, useRef } from 'react';
+
 import { useTranslation } from 'react-i18next';
+
 import { useInView } from 'framer-motion';
+
 import { useLocation } from 'react-router-dom';
+
 import { useIsMobile } from '../hooks/use-mobile';
 
+
+
 import Header from '../components/Header';
+
 import Hero from '../components/Hero';
+
 import Features from '../components/Features';
-import BrandMarquee from '../components/BrandMarquee';
+
 import Stories from '../components/Stories';
+
 import Location from '../components/Location';
+
 import Footer from '../components/Footer';
+
 import DiningTeaser from '../components/DiningTeaser';
 
 export default function Home() {
@@ -46,6 +59,7 @@ export default function Home() {
         <Hero ref={heroRef} />
         <Features />
         <BrandMarquee />
+
         <section className="relative py-20 px-6 overflow-hidden">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-black"
