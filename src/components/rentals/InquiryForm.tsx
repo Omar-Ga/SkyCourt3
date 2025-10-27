@@ -1,17 +1,13 @@
-import { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Mail, MessageSquare, Phone, MapPin, Send } from 'lucide-react';
 
-interface InquiryFormProps {}
-
-const InquiryForm = forwardRef<HTMLDivElement, InquiryFormProps>((_, ref) => {
+const InquiryForm = () => {
   const { t } = useTranslation();
 
   return (
     <section 
-      ref={ref} 
       className="relative py-20 bg-cover bg-center" 
       style={{ backgroundImage: "url('/public/hero section/hero-bg-2.jpg')" }}
     >
@@ -143,8 +139,6 @@ const InquiryForm = forwardRef<HTMLDivElement, InquiryFormProps>((_, ref) => {
       </div>
     </section>
   );
-});
-
-InquiryForm.displayName = 'InquiryForm';
+}
 
 export default InquiryForm;

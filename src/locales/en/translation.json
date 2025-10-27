@@ -348,7 +348,7 @@
   "careers_dont_see_role": "Don't see the right role?",
   "careers_send_resume": "Send us your resume",
   "careers_link": "Careers",
-  "rentals": "Rentals",
+  "rentals": "Business Partner",
   "rentals_page": {
     "hero": {
       "title": "Your Business Deserves the Best Location",
@@ -496,5 +496,21 @@
     "floating_whatsapp_button": {
       "inquire_now": "Inquire Now"
     }
-  }
+  },
+  "cafes.title": "Our Cafes",
+  "cafes.cafe1.name": "Cilantro",
+  "cafes.cafe1.tagline": "Freshly brewed coffee and delicious pastries.",
+  "cafes.cafe1.detail1": "A cozy and inviting atmosphere.",
+  "cafes.cafe1.detail2": "Perfect for a morning coffee or an afternoon break.",
+  "cafes.cafe1.detail3": "A wide selection of sandwiches and salads.",
+  "cafes.cafe2.name": "Beano's",
+  "cafes.cafe2.tagline": "A vibrant and modern coffee experience.",
+  "cafes.cafe2.detail1": "Specialty coffee and artisanal pastries.",
+  "cafes.cafe2.detail2": "A great place to work or socialize.",
+  "cafes.cafe2.detail3": "A lively and energetic atmosphere.",
+  "cafes.cafe3.name": "Costa Coffee",
+  "cafes.cafe3.tagline": "The nation's favorite coffee shop.",
+  "cafes.cafe3.detail1": "A wide range of coffee and tea.",
+  "cafes.cafe3.detail2": "A comfortable and relaxing environment.",
+  "cafes.cafe3.detail3": "A selection of cakes and snacks."
 }

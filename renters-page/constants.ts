@@ -1,5 +1,5 @@
 
-import { Testimonial, FaqItem, TimelineItem, StatItem, FacilityItem } from './types';
+import { Testimonial, FaqItem, StatItem, FacilityItem } from './types';
 import { MdOutlineHandshake, MdTrendingUp, MdOutlineSecurity, MdManageAccounts, MdGroups } from 'react-icons/md';
 
 export const testimonials: Testimonial[] = [
