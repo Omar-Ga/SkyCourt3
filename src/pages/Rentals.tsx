@@ -19,8 +19,7 @@ export default function Rentals() {
   };
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent('مرحبا، أرغب في الاستفسار عن التأجير في مول سكاي كورت');
-    window.open(`https://wa.me/201234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/201234567890`, '_blank');
   };
 
   return (

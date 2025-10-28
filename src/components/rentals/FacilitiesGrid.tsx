@@ -66,14 +66,14 @@ export default function FacilitiesGrid() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
               <div className="relative z-10 flex flex-col justify-between h-full p-6 text-white">
                 <motion.h3
-                  className="text-xl md:text-2xl font-bold mb-2"
+                  className="text-lg md:text-xl font-bold mb-2"
                   initial={{ opacity: 1 }}
                   whileHover={isMobile ? {} : { opacity: 1 }}
                 >
                   {t(`rentals_page.facilities.items.${index}.title`)}
                 </motion.h3>
                 <motion.p
-                  className="text-base md:text-lg font-medium text-gray-200 transition-opacity duration-300 mt-auto"
+                  className="text-sm md:text-base font-medium text-gray-200 transition-opacity duration-300 mt-auto"
                   initial={{ y: 10 }}
                   whileHover={isMobile ? {} : { y: 0 }}
                   transition={{ duration: 0.3 }}

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { User, Mail, MessageSquare, Send } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import DirectContactOptions from '../components/DirectContactOptions';
 
 export default function ContactUs() {
   const { t } = useTranslation();
@@ -97,6 +98,8 @@ export default function ContactUs() {
             )}
           </div>
         </div>
+
+        <DirectContactOptions />
       </main>
       <Footer />
     </>

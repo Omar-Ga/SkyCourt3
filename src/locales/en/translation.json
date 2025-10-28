@@ -206,12 +206,8 @@
   "nav_services": "Services",
   "dining_headline": "Dining at SkyCourt",
   "dining_subheadline": "Explore a curated selection of cafes and restaurants.",
-  "cafes": "Cafes",
   "location": "Location",
   "contact": "Contact",
-  "cafes_section_badge": "Our Cafes",
-  "cafes_headline_prefix": "Discover Our",
-  "cafes_subheadline": "From a quick coffee to a relaxing lunch, choose from our diverse selection of cafes.",
   "stories_title": "Services",
   "eateries": {
     "kfc": {
@@ -338,6 +334,12 @@
   "contact_us_send": "Send Message",
   "contact_us_sending": "Sending...",
   "contact_us_success": "Form Submitted Successfully",
+  "or_talk_to_us_directly": "Or talk to us directly",
+  "call_us": "Call Us",
+  "whatsapp_us": "WhatsApp Us",
+  "email_us": "Email Us",
+  "whatsapp_inquiry_message": "Hello, I would like to inquire about SkyCourt.",
+  "or_email_us_directly_at": "Or email us directly at",
   "email_link": "Contact Us",
   "careers": "Careers",
   "careers_join_our_team": "Join Our Team",
@@ -350,219 +352,24 @@
   "rentals": "Business Partners",
   "rentals_page": {
     "hero": {
-      "title": "Your Business Deserves the Best Location",
+      "title": "Your Business Deserves the Best",
       "subtitle": "Join the most successful shopping destination on the North Coast",
       "cta_primary": "Start Your Inquiry",
       "cta_secondary": "Learn More"
     },
-    "location": {
-      "badge": "Strategic Location",
-      "title": "In the Heart of the North Coast",
-      "description": "SkyCourt Mall is strategically located on the Alexandria-Marsa Matrouh road at kilometer 137, making it the premier destination for tourists and residents alike.",
-      "features": [
-        "Kilometer 136 Alexandria-Marsa Matrouh Road",
-        "Directly opposite tourist villages",
-        "Largest mall on the North Coast",
-        "Easy accessibility for customers and suppliers"
-      ]
+    "facilities_grid": {
+      "title": "World-Class Facilities",
+      "subtitle": "Enjoy advanced and integrated facilities that ensure comfort and ease of work in a professional environment."
     },
-    "facilities": {
-      "badge": "World-Class Facilities",
-      "title": "Everything Your Business Needs",
-      "items": [
-        {
-          "title": "Parking",
-          "description": "Ample parking for over 1000 cars, professionally managed for your convenience and peace of mind."
-        },
-        {
-          "title": "Green Spaces and Waterfalls",
-          "description": "Adding aesthetic appeal and a wonderful atmosphere of joy for shoppers."
-        },
-        {
-          "title": "Maintenance Teams",
-          "description": "Professional maintenance teams are available 24/7, ensuring immediate and efficient service for all tenants."
-        },
-        {
-          "title": "Advanced Management Systems",
-          "description": "Professional administrative team using latest management methods to organize work and improve performance."
-        },
-        {
-          "title": "International Brands",
-          "description": "Host your brand alongside a curated selection of world-renowned retail and dining establishments."
-        },
-        {
-          "title": "24/7 Security",
-          "description": "A trained and professional security team ensures the safety and security of all visitors and tenants around the clock."
-        }
-      ]
+    "faq_section": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about rental opportunities at SkyCourt Mall. Didn't find your answer? Contact us directly.",
+      "contact_us_button": "Contact Us"
     },
-    "faq": {
-      "badge": "Frequently Asked Questions",
-      "title": "Everything You Need to Know",
-      "items": [
-        {
-          "question": "What is the lease term?",
-          "answer": "Leasing is done with annual contracts or more depending on the area, distinction and location within the mall."
-        },
-        {
-          "question": "What spaces are currently available?",
-          "answer": "Various and different spaces are available, from medium to large, according to the tenant's desire and the nature of the commercial activity."
-        },
-        {
-          "question": "Is there marketing support for tenants?",
-          "answer": "Yes, we provide all services and facilities for tenants, including marketing support through mall advertising campaigns and ongoing events."
-        },
-        {
-          "question": "How is maintenance handled?",
-          "answer": "We have a maintenance team of the most skilled technicians working around the clock to ensure any problem related to plumbing, electricity, or landscaping is resolved immediately."
-        },
-        {
-          "question": "Who are the current tenants?",
-          "answer": "We are proud to host major international and famous local companies and brands, creating a rich and diverse business environment."
-        },
-        {
-          "question": "How can I view the spaces?",
-          "answer": "You can contact us directly through the inquiry form or the phone numbers shown to arrange a private tour of the mall."
-        }
-      ]
-    },
-    "inquiry_form": {
-      "badge": "Get Started",
-      "title": "Ready to Join SkyCourt?",
-      "interested_title": "Interested in Renting?",
-      "interested_description": "Use our contact form to send your inquiry with all required details. Our sales team will respond to you as soon as possible.",
-      "send_detailed_inquiry": "Send Detailed Inquiry",
-      "direct_contact_methods": "Direct Contact Methods",
-      "whatsapp": "WhatsApp",
-      "chat_directly": "Chat with us directly",
-      "phone": "Phone",
-      "email": "Email",
-      "location": "Location",
-      "location_address": "SkyCourt Mall - North Coast",
-      "fields": {
-        "full_name": "Full Name",
-        "email": "Email Address",
-        "phone": "Phone Number",
-        "business_type": "Business Type",
-        "space_requirement": "Space Requirement",
-        "message": "Additional Information"
-      },
-      "space_options": {
-        "small": "Small (50-100 sqm)",
-        "medium": "Medium (100-200 sqm)",
-        "large": "Large (200+ sqm)",
-        "undecided": "I'm not sure yet"
-      },
-      "placeholders": {
-        "full_name": "Enter your full name",
-        "email": "Enter your email address",
-        "phone": "Enter your phone number",
-        "business_type": "e.g., Restaurant, Retail, Services",
-        "message": "Tell us about your business and requirements"
-      },
-      "submit": "Submit Inquiry",
-      "submitting": "Submitting...",
-      "success": "Thank you! We'll contact you within 24 hours.",
-      "error": "Something went wrong. Please try again."
-    },
-    "cta_primary": "Start Your Inquiry",
-    "cta_secondary": "Learn More"
-  },
-  "visual_stats_grid": {
-    "stats": {
-      "2": {
-        "label": "Green Area"
-      },
-      "3": {
-        "label": "Occupancy Rate"
-      }
+    "final_cta_section": {
+      "title": "Ready to be part of the largest mall on the North Coast?",
+      "subtitle": "SkyCourt Mall was designed with the comfort and enjoyment of shoppers in mind, offering the best services to tenants. Join us today.",
+      "primary_button": "Talk to the Sales Team Now"
     }
-  },
-  "tenant_testimonials": {
-    "title": "Success Stories from Our Partners",
-    "items": [
-      {
-        "quote": "Joining SkyCourt was the best decision we made. The visitor traffic is unparalleled, and our sales increased by 150% in the first year alone.",
-        "author": "KFC Branch Manager",
-        "result": "150% Sales Increase"
-      },
-      {
-        "quote": "The support we receive from the mall management is exceptional. From marketing to maintenance, everything is handled with high professionalism, allowing us to focus on serving our customers.",
-        "author": "Hardee's Franchisee",
-        "result": "Highest Foot Traffic"
-      },
-      {
-        "quote": "The mall's strategic location on the North Coast makes it a prime destination. We see great turnout throughout the year, not just in the summer season.",
-        "author": "Pizza Hut Team",
-        "result": "High Turnout All Year"
-      }
-    ]
-  },
-  "final_cta": {
-    "title": "Ready to Grow Your Business?",
-    "subtitle": "Join the most successful shopping destination on the North Coast and watch your business thrive.",
-    "cta": "Start Your Journey Today"
-  },
-  "whatsapp": {
-    "text": "Chat with us on WhatsApp"
-  },
-  "facilities_grid": {
-    "title": "World-Class Facilities",
-    "subtitle": "Enjoy advanced and integrated facilities that ensure comfort and ease of work in a professional environment."
-  },
-  "faq_section": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about rental opportunities at SkyCourt Mall. Didn't find your answer? Contact us directly.",
-    "contact_us_button": "Contact Us"
-  },
-  "final_cta_section": {
-    "title": "Ready to be part of the largest mall on the North Coast?",
-    "subtitle": "SkyCourt Mall was designed with the comfort and enjoyment of shoppers in mind, offering the best services to tenants. Join us today.",
-    "primary_button": "Talk to the Sales Team Now"
-  },
-  "floating_whatsapp_button": {
-    "inquire_now": "Inquire Now",
-    "aria_label": "Inquire Now via WhatsApp"
-  },
-  "benefits_timeline": {
-    "title": "Your Journey with SkyCourt",
-    "items": [
-      {
-        "title": "Flexible Contracts",
-        "description": "We offer flexible annual contracts that suit your business needs and growth aspirations."
-      },
-      {
-        "title": "Marketing Support",
-        "description": "Benefit from the mall's ongoing marketing campaigns to increase your brand awareness."
-      },
-      {
-        "title": "Continuous Maintenance",
-        "description": "Our skilled maintenance teams are available around the clock to ensure your business continuity."
-      },
-      {
-        "title": "Professional Management",
-        "description": "We use the latest management systems to ensure a smooth and efficient experience for all tenants."
-      },
-      {
-        "title": "Business Community",
-        "description": "Join a selection of established brands and benefit from an integrated business environment."
-      }
-    ]
-  },
-  "cafes.title": "Our Cafes",
-  "cafes.cafe1.name": "Cilantro",
-  "cafes.cafe1.tagline": "Freshly brewed coffee and delicious pastries.",
-  "cafes.cafe1.detail1": "A cozy and inviting atmosphere.",
-  "cafes.cafe1.detail2": "Perfect for a morning coffee or an afternoon break.",
-  "cafes.cafe1.detail3": "A wide selection of sandwiches and salads.",
-  "cafes.cafe2.name": "Beano's",
-  "cafes.cafe2.tagline": "A vibrant and modern coffee experience.",
-  "cafes.cafe2.detail1": "Specialty coffee and artisanal pastries.",
-  "cafes.cafe2.detail2": "A great place to work or socialize.",
-  "cafes.cafe2.detail3": "A lively and energetic atmosphere.",
-  "cafes.cafe3.name": "Costa Coffee",
-  "cafes.cafe3.tagline": "The nation's favorite coffee shop.",
-  "cafes.cafe3.detail1": "A wide range of coffee and tea.",
-  "cafes.cafe3.detail2": "A comfortable and relaxing environment.",
-  "cafes.cafe3.detail3": "A selection of cakes and snacks."
+  }
 }
