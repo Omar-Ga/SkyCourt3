@@ -180,25 +180,16 @@ body {
 
 /* Mobile hero height fix */
 .mobile-hero-height {
-  height: 100vh;
-  height: 100dvh; /* Use dynamic viewport height when supported */
+  height: 100dvh; /* Use dynamic viewport height */
   padding-top: 80px; /* Account for fixed header */
 }
 
 /* On mobile devices, ensure hero doesn't exceed viewport */
 @media (max-width: 768px) {
   .mobile-hero-height {
-    height: 100vh;
-    max-height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
     padding-top: 70px; /* Smaller padding for mobile header */
-  }
-  
-  /* Support for newer browsers with dynamic viewport */
-  @supports (height: 100dvh) {
-    .mobile-hero-height {
-      height: 100dvh;
-      max-height: 100dvh;
-    }
   }
 }
 

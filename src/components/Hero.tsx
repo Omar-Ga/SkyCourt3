@@ -69,7 +69,7 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
   };
 
   return (
-    <section ref={ref} id="hero" className="relative w-full h-screen overflow-hidden">
+    <section ref={ref} id="hero" className="relative w-full h-dvh overflow-hidden">
       <div className="absolute top-0 left-0 right-0 z-30 flex justify-center pt-8">
         <nav className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (

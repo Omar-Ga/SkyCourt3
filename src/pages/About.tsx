@@ -8,7 +8,7 @@ import StorySection from '../components/about/StorySection';
 import ParallaxImage from '../components/about/ParallaxImage';
 import NumberCounter from '../components/about/NumberCounter';
 
-import { Virtuoso } from 'react-virtuoso';
+
 
 export default function About() {
   const { t } = useTranslation();
@@ -38,20 +38,17 @@ export default function About() {
       <div ref={containerRef} className="relative bg-white">
         <AboutHero />
 
-        <Virtuoso
-          data={stories}
-          itemContent={(index, story) => (
-            <StorySection
-              key={index}
-              title={story.title}
-              content={story.content}
-              image={story.image}
-              index={index}
-              totalStories={stories.length}
-              scrollYProgress={scrollYProgress}
-            />
-          )}
-        />
+        {stories.map((story, index) => (
+          <StorySection
+            key={index}
+            title={story.title}
+            content={story.content}
+            image={story.image}
+            index={index}
+            totalStories={stories.length}
+            scrollYProgress={scrollYProgress}
+          />
+        ))}
 
         <section className="relative py-32 bg-black text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">

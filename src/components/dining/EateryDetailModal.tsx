@@ -111,7 +111,7 @@ export const EateryDetailModal = ({ eatery, onClose }: Props) => {
 
 
                   {isMobile && (
-                    <div className="mt-6 w-full space-y-4 max-h-[calc(100vh-450px)] overflow-y-auto p-1">
+                    <div className="mt-6 w-full space-y-4 max-h-[calc(100dvh-450px)] overflow-y-auto p-1">
                       {eatery.details.map((detail, index) => (
                         <motion.div
                           key={index}

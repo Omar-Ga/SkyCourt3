@@ -19,7 +19,7 @@ export default function LocationSection() {
     <section
       id="location-section"
       ref={ref}
-      className="relative min-h-[40vh] sm:min-h-[40vh] md:h-[40vh] w-full overflow-hidden py-12 sm:py-16 md:py-0"
+      className="relative min-h-[40dvh] sm:min-h-[40dvh] md:h-[40dvh] w-full overflow-hidden py-12 sm:py-16 md:py-0"
       dir={i18n.dir()}
     >
       <motion.div
