@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SmoothScroll from './components/SmoothScroll';
 import Home from './pages/Home';
@@ -9,15 +9,32 @@ import Cafes from './pages/Cafes';
 import ContactUs from './pages/ContactUs';
 import Careers from './pages/Careers'; // Import Careers component
 import Rentals from './pages/Rentals'; // Import Rentals component
+import ScrollToTop from './components/ScrollToTop';
+
+// Layout component that includes ScrollToTop
+function Layout() {
+  return (
+    <>
+      <ScrollToTop />
+      <Outlet />
+    </>
+  );
+}
 
 const router = createBrowserRouter([
-  { path: '/', element: <Home /> },
-  { path: '/dining', element: <Dining /> },
-  { path: '/cafes', element: <Cafes /> },
-  { path: '/about', element: <About /> },
-  { path: '/contact-us', element: <ContactUs /> },
-  { path: '/careers', element: <Careers /> }, // Add new route for Careers
-  { path: '/rentals', element: <Rentals /> }, // Add new route for Rentals
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'dining', element: <Dining /> },
+      { path: 'cafes', element: <Cafes /> },
+      { path: 'about', element: <About /> },
+      { path: 'contact-us', element: <ContactUs /> },
+      { path: 'careers', element: <Careers /> },
+      { path: 'rentals', element: <Rentals /> },
+    ],
+  },
 ]);
 
 function App() {

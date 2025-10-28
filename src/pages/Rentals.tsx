@@ -33,7 +33,7 @@ export default function Rentals() {
         <LocationSection />
         <FacilitiesGrid />
 
-        <RentalsFAQ />
+        <RentalsFAQ onContactUsClick={scrollToInquiry} />
         <InquiryForm ref={inquiryFormRef} />
         <FinalCTA onPrimaryClick={scrollToInquiry} />
       </main>

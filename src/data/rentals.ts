@@ -17,8 +17,6 @@ export interface FaqItem {
 
 
 export interface FacilityItem {
-  title: string;
-  description: string;
   imageUrl: string;
   gridSpan: string;
 }
@@ -51,19 +49,18 @@ export const faqItems: FaqItem[] = [
 
 // Statistics items (restored - may be used elsewhere)
 export const statsItems: StatItem[] = [
-  { value: 1000, label: "موقف سيارة", suffix: "+", imageUrl: "" },
-  { value: 24, label: "أمن وصيانة", suffix: "/7", imageUrl: "" },
-  { value: 50000, label: "مساحة خضراء", suffix: "م²", imageUrl: "" },
-  { value: 95, label: "نسبة الإشغال", suffix: "%", imageUrl: "" }
+  { value: 1000, label: "موقف سيارة", suffix: "+" },
+  { value: 24, label: "أمن وصيانة", suffix: "/7" },
+  { value: 50000, label: "مساحة خضراء", suffix: "م²" },
+  { value: 95, label: "نسبة الإشغال", suffix: "%" }
 ];
 
 // Facilities available at the mall
 export const facilities: FacilityItem[] = [
-  { title: "براندات عالمية", description: "مواقف سيارات تتسع لأكثر من 1000 سيارة وتدار بواسطة شركة متخصصة.", imageUrl: "" , gridSpan: "md:col-span-1" },
-  { title: "مواقف سيارات", description: "وصف للمرفق الجديد", imageUrl: "" , gridSpan: "md:col-span-1" },
-  { title: "امن على مدار الساعه", description: "مساحات خضراء كبيرة جداً للاسترخاء والاستمتاع.", imageUrl: "" , gridSpan: "md:col-span-1" },
-  { title: "مساحات خضراء", description: "شلالات مياه رائعة تضيف لمسة جمالية للمكان.", imageUrl: "" , gridSpan: "md:col-span-1" },
-  { title: "شلالات مياة", description: "صيانة على مدار الساعة (سباكة، كهرباء، زراعة).", imageUrl: "" , gridSpan: "md:col-span-1" },
-  { title: "العاب اطفال", description: "شركة أمن محترفة ومتخصصة لضمان سلامة الجميع.", imageUrl: "" , gridSpan: "md:col-span-1" },
-  { title: "فريق صيانه محترف على مدار الساعه", description: "طرق إدارة حديثة للتعامل مع المستأجرين.", imageUrl: "/rentals/professional_maintenance.png" , gridSpan: "md:col-span-2" }
+  { imageUrl: "/rentals_images/facilities_images/placeholder_1.webp", gridSpan: "md:col-span-1" },
+  { imageUrl: "/rentals_images/facilities_images/placeholder_2.webp", gridSpan: "md:col-span-1" },
+  { imageUrl: "/rentals_images/facilities_images/placeholder_3.webp", gridSpan: "md:col-span-1" },
+  { imageUrl: "/rentals_images/facilities_images/placeholder_4.webp", gridSpan: "md:col-span-1" },
+  { imageUrl: "/rentals_images/facilities_images/placeholder_5.webp", gridSpan: "md:col-span-1" },
+  { imageUrl: "/rentals_images/facilities_images/placeholder_6.webp", gridSpan: "md:col-span-1" },
 ];

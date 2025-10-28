@@ -11,6 +11,23 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+
+  optimizeDeps: {
+    include: [
+      'lucide-react',
+      'framer-motion',
+      'react-router-dom',
+      'i18next',
+      'react-i18next',
+      'i18next-browser-languagedetector',
+      '@studio-freight/lenis',
+      'react-intersection-observer',
+      '@use-gesture/react',
+      'react-virtuoso',
+      'tailwind-merge',
+      'clsx',
+    ],
+  },
   server: {
     host: '0.0.0.0', // Use 0.0.0.0 to listen on all interfaces
     cors: {
@@ -19,8 +36,5 @@ export default defineConfig({
       preflightContinue: false,
       optionsSuccessStatus: 204,
     },
-  },
-  optimizeDeps: {
-    include: ['lucide-react'],
   },
 });

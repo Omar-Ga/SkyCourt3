@@ -115,7 +115,12 @@ const InquiryForm = forwardRef<HTMLDivElement>((_props, ref) => {
                 </div>
               </a>
               
-              <div className="flex items-center gap-3 sm:gap-4 bg-white/10 p-3 sm:p-4 rounded-lg">
+              <a 
+                href="https://www.google.com/maps/search/SkyCourt+Mall+-+North+Coast" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-3 sm:gap-4 bg-white/10 p-3 sm:p-4 rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105 min-h-[44px] touch-manipulation"
+              >
                 <div className="bg-white/20 p-2 rounded-full flex-shrink-0">
                   <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
@@ -123,7 +128,7 @@ const InquiryForm = forwardRef<HTMLDivElement>((_props, ref) => {
                   <span className="font-semibold text-base sm:text-lg block">{t('rentals_page.inquiry_form.location')}</span>
                   <span className="text-sm opacity-90">{t('rentals_page.inquiry_form.location_address')}</span>
                 </div>
-              </div>
+              </a>
             </div>
           </motion.div>
         </div>
