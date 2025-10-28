@@ -31,7 +31,7 @@ export default function FacilitiesGrid() {
           transition={{ duration: 0.8 }}
           className={`${i18n.dir() === 'rtl' ? 'text-center' : 'text-center'} mb-12 sm:mb-16 px-4`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {t('rentals_page.facilities_grid.title')}
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">

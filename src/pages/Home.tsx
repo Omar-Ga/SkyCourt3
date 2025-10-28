@@ -2,7 +2,7 @@
 
 import BrandMarquee from '../components/BrandMarquee';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -34,6 +34,20 @@ export default function Home() {
   const heroInView = useInView(heroRef, { margin: '-50% 0px -50% 0px' });
   const location = useLocation();
   const isMobile = useIsMobile();
+  const [showHeader, setShowHeader] = useState(false);
+
+  // Alternative scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const heroHeight = window.innerHeight;
+      const shouldShow = scrollY > heroHeight * 0.5;
+      setShowHeader(shouldShow);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     document.documentElement.dir = i18n.dir();
@@ -54,7 +68,7 @@ export default function Home() {
     <>
       <div className="grain-overlay" />
 
-      <Header show={isMobile || !heroInView} />
+      <Header show={isMobile || showHeader} />
       <main>
         <Hero ref={heroRef} />
         <Features />

@@ -28,7 +28,7 @@ export default function FinalCTA({ onPrimaryClick }: FinalCTAProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 font-['Alan_Sans'] px-4 text-center">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-black mb-4 font-['Alan_Sans'] px-4 text-center">
             {t('rentals_page.final_cta_section.title')}
           </h2>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-white/90 mb-8 font-['Alan_Sans'] px-4 text-center">

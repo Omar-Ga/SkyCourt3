@@ -35,7 +35,7 @@ export default function Location() {
             className="text-5xl md:text-7xl font-light mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{}}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             {t('visit_us_today')}
@@ -44,7 +44,7 @@ export default function Location() {
             className="text-lg text-white/70 max-w-xl mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{}}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {t('find_us_in_the_heart')}
@@ -57,7 +57,7 @@ export default function Location() {
                 className="flex items-start gap-6"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{}}
+                viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.4 + index * 0.15 }}
               >
                 <item.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" strokeWidth={1.5} />
@@ -82,7 +82,7 @@ export default function Location() {
           className="relative h-[500px] bg-neutral-800/50 rounded-2xl flex items-center justify-center overflow-hidden"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{}}
+          viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="text-white/40 text-2xl relative">

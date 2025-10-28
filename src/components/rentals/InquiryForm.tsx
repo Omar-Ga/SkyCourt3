@@ -21,7 +21,7 @@ const InquiryForm = forwardRef<HTMLDivElement>((_props, ref) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold"
+            className="text-3xl sm:text-3xl md:text-4xl font-bold"
           >
             {t('rentals_page.inquiry_form.title')}
           </motion.h2>

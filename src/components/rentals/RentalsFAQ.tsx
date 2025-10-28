@@ -87,7 +87,7 @@ export default function RentalsFAQ({ onContactUsClick }: RentalsFAQProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 text-center">
+            <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 text-center">
               {t('rentals_page.faq_section.title')}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center">

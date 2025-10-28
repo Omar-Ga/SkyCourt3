@@ -20,4 +20,7 @@ export default defineConfig({
       optionsSuccessStatus: 204,
     },
   },
+  optimizeDeps: {
+    include: ['lucide-react'],
+  },
 });
