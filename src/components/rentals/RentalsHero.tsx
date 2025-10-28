@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 import { ChevronDown } from 'lucide-react';
 
@@ -21,10 +22,11 @@ const scrollToSection = (sectionId: string) => {
 export default function RentalsHero({ onInquireClick }: RentalsHeroProps) {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.dir() === 'rtl';
+  const isMobile = useIsMobile();
   
   return (
     <section className="relative w-full flex items-center justify-center text-white mobile-hero-height" dir={i18n.dir()}>
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/seed/mallhero/1920/1080')" }}></div>
+      <div className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed" style={{ backgroundImage: "url('/public/rentals_images/mallhero.webp')" }}></div>
       <div className="absolute inset-0 bg-black/60"></div>
 
       <motion.div 
@@ -58,7 +60,7 @@ export default function RentalsHero({ onInquireClick }: RentalsHeroProps) {
         >
           <button 
             onClick={onInquireClick}
-            className="bg-scm-green text-white font-bold py-4 px-8 sm:px-12 rounded-full text-base sm:text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[44px] touch-manipulation w-full sm:w-auto text-center"
+            className={`bg-scm-green text-white font-bold py-4 px-8 sm:px-12 rounded-full text-base sm:text-lg ${isMobile ? '' : 'hover:bg-green-700 transition-all duration-300 transform hover:scale-105'} shadow-lg min-h-[44px] touch-manipulation w-full sm:w-auto text-center`}
           >
             {t('rentals_page.hero.cta_primary')}
           </button>

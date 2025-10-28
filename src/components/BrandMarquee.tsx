@@ -94,7 +94,7 @@ export default function BrandMarquee() {
       dir={i18n.dir()}
     >
       <div className="text-center mb-16">
-        <h2 className="text-5xl md:text-7xl font-light text-black mb-6">
+        <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
           {t("iconic_brands")}
         </h2>
       </div>

@@ -3,8 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { statsItems } from '../../constants';
 import { useCountUp } from '../../hooks/useCountUp';
+import { useTranslation } from 'react-i18next';
 
 const StatCard: React.FC<{ item: typeof statsItems[0]; index: number }> = ({ item, index }) => {
+  const { t } = useTranslation();
   const countUpRef = useCountUp(item.value);
 
   const cardVariants = {
@@ -21,13 +23,13 @@ const StatCard: React.FC<{ item: typeof statsItems[0]; index: number }> = ({ ite
       variants={cardVariants}
       className="relative rounded-xl overflow-hidden h-96 group"
     >
-      <img src={item.imageUrl} alt={item.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+      <img src={item.imageUrl} alt={t(item.label)} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
       <div className="relative z-10 flex flex-col justify-end h-full p-8 text-white">
         <h3 className="text-5xl font-black">
           <span ref={countUpRef}>0</span>{item.suffix}
         </h3>
-        <p className="text-xl mt-2">{item.label}</p>
+        <p className="text-xl mt-2">{t(item.label)}</p>
       </div>
     </motion.div>
   );

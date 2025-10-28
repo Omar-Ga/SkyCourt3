@@ -4,9 +4,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RentalsHero from '../components/rentals/RentalsHero';
 import LocationSection from '../components/rentals/LocationSection';
-
-
-
 import FacilitiesGrid from '../components/rentals/FacilitiesGrid';
 import RentalsFAQ from '../components/rentals/RentalsFAQ';
 import InquiryForm from '../components/rentals/InquiryForm';
@@ -30,11 +27,12 @@ export default function Rentals() {
     <>
       <div className="grain-overlay" />
       <Header show={true} />
-      
+
       <main className="relative bg-white" dir={i18n.dir()}>
         <RentalsHero onInquireClick={scrollToInquiry} />
         <LocationSection />
         <FacilitiesGrid />
+
         <RentalsFAQ />
         <InquiryForm ref={inquiryFormRef} />
         <FinalCTA onPrimaryClick={scrollToInquiry} />

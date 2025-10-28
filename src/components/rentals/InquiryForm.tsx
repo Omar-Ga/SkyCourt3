@@ -1,13 +1,15 @@
+import { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Mail, MessageSquare, Phone, MapPin, Send } from 'lucide-react';
 
-const InquiryForm = () => {
+const InquiryForm = forwardRef<HTMLDivElement>((_props, ref) => {
   const { t } = useTranslation();
 
   return (
     <section 
+      ref={ref}
       className="relative py-20 bg-cover bg-center" 
       style={{ backgroundImage: "url('/public/hero section/hero-bg-2.jpg')" }}
     >
@@ -19,19 +21,11 @@ const InquiryForm = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold"
           >
             {t('rentals_page.inquiry_form.title')}
           </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-4 text-base sm:text-lg"
-          >
-            {t('rentals_page.inquiry_form.subtitle')}
-          </motion.p>
+          
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center px-4">
@@ -40,7 +34,7 @@ const InquiryForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="frosted-glass p-6 sm:p-8 rounded-2xl border border-white/20 text-center"
+            className="dark-frosted-glass p-6 sm:p-8 rounded-2xl border border-white/20 text-center"
           >
             <div className="space-y-4 sm:space-y-6">
               <div className="flex justify-center">
@@ -59,16 +53,13 @@ const InquiryForm = () => {
 
               <div className="space-y-4">
                 <Link
-                  to="/contact"
+                  to="/contact-us"
                   className="inline-flex items-center justify-center gap-3 w-full bg-scm-green text-white font-bold py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[44px] touch-manipulation"
                 >
                   <Send className="w-5 h-5" />
                   {t('rentals_page.inquiry_form.send_detailed_inquiry')}
                 </Link>
                 
-                <p className="text-sm text-gray-300">
-                  {t('rentals_page.inquiry_form.or_contact_directly')}
-                </p>
               </div>
             </div>
           </motion.div>
@@ -90,7 +81,7 @@ const InquiryForm = () => {
                 className="flex items-center gap-3 sm:gap-4 bg-green-500 p-3 sm:p-4 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[44px] touch-manipulation"
               >
                 <div className="bg-white/20 p-2 rounded-full flex-shrink-0">
-                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="min-w-0">
                   <span className="font-semibold text-base sm:text-lg block">{t('rentals_page.inquiry_form.whatsapp')}</span>
@@ -139,6 +130,8 @@ const InquiryForm = () => {
       </div>
     </section>
   );
-}
+});
+
+InquiryForm.displayName = 'InquiryForm';
 
 export default InquiryForm;

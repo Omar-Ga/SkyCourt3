@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,13 +29,13 @@ export default function Header() {
     >
       <div className={`container mx-auto px-6 py-4 flex justify-between items-center border-b transition-colors duration-300 ${scrolled ? 'border-white/10' : 'border-transparent'}`}>
         <div className="text-2xl font-bold text-white tracking-wider">
-          سكاي كورت مول
+          {t('skycourt')}
         </div>
         <nav className="hidden md:flex items-center space-x-8 space-x-reverse text-white">
-          <a href="#" className="hover:text-gray-300 transition-colors">الرئيسية</a>
-          <a href="#" className="hover:text-gray-300 transition-colors">عنا</a>
-          <a href="#" className="font-bold border-b-2 border-highlight text-highlight">تأجير</a>
-          <a href="#" className="hover:text-gray-300 transition-colors">تواصل معنا</a>
+          <a href="#" className="hover:text-gray-300 transition-colors">{t('home')}</a>
+          <a href="#" className="hover:text-gray-300 transition-colors">{t('about_us')}</a>
+          <a href="#" className="font-bold border-b-2 border-highlight text-highlight">{t('rentals')}</a>
+          <a href="#" className="hover:text-gray-300 transition-colors">{t('contact_us')}</a>
         </nav>
         <button className="md:hidden text-white">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

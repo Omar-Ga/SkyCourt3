@@ -28,7 +28,7 @@ export default function FinalCTA({ onPrimaryClick }: FinalCTAProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 font-['Alan_Sans'] px-4 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 font-['Alan_Sans'] px-4 text-center">
             {t('rentals_page.final_cta_section.title')}
           </h2>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-white/90 mb-8 font-['Alan_Sans'] px-4 text-center">
@@ -38,20 +38,13 @@ export default function FinalCTA({ onPrimaryClick }: FinalCTAProps) {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
             <motion.button 
               onClick={onPrimaryClick}
-              className="bg-scm-green text-white font-semibold py-4 px-6 sm:px-10 rounded-full text-base sm:text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-scm-green min-h-[44px] w-full sm:w-auto touch-manipulation text-center"
+              className="bg-scm-green text-white font-semibold py-3 px-6 sm:px-10 rounded-full text-base sm:text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:focus:ring-offset-2 focus:ring-scm-green min-h-[44px] w-full sm:w-auto text-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {t('rentals_page.final_cta_section.primary_button')}
+              {t('contact_us')}
             </motion.button>
             
-            <motion.button 
-              className="bg-transparent border-2 border-white text-white font-semibold py-4 px-6 sm:px-10 rounded-full text-base sm:text-lg hover:bg-white hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white min-h-[44px] w-full sm:w-auto touch-manipulation text-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {t('rentals_page.final_cta_section.secondary_button')}
-            </motion.button>
           </div>
         </motion.div>
       </div>

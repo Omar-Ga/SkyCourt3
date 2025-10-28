@@ -212,7 +212,7 @@
   "cafes_section_badge": "Our Cafes",
   "cafes_headline_prefix": "Discover Our",
   "cafes_subheadline": "From a quick coffee to a relaxing lunch, choose from our diverse selection of cafes.",
-  "stories_title": "Stories",
+  "stories_title": "Services",
   "eateries": {
     "kfc": {
       "name": "KFC",
@@ -374,27 +374,31 @@
       "title": "Everything Your Business Needs",
       "items": [
         {
-          "title": "Parking Spaces",
+          "title": "International Brands",
           "description": "Parking spaces for more than 1000 cars managed by a specialized company."
         },
         {
-          "title": "Green Spaces",
+          "title": "Car Parking",
+          "description": "A new facility description."
+        },
+        {
+          "title": "24/7 Security",
           "description": "Very large green spaces for relaxation and enjoyment."
         },
         {
-          "title": "Water Features",
+          "title": "Green Spaces",
           "description": "Beautiful water fountains that add an aesthetic touch to the place."
         },
         {
-          "title": "Maintenance Team",
+          "title": "Waterfalls",
           "description": "24-hour maintenance (plumbing, electricity, landscaping)."
         },
         {
-          "title": "Professional Security",
+          "title": "Kids Area",
           "description": "Professional and specialized security company to ensure everyone's safety."
         },
         {
-          "title": "Modern Management",
+          "title": "24/7 Professional Maintenance Team",
           "description": "Modern management methods for dealing with tenants."
         }
       ]
@@ -432,11 +436,9 @@
     "inquiry_form": {
       "badge": "Get Started",
       "title": "Ready to Join SkyCourt?",
-      "subtitle": "Fill out the form below and our team will contact you within 24 hours to discuss your business needs.",
       "interested_title": "Interested in Renting?",
       "interested_description": "Use our contact form to send your inquiry with all required details. Our sales team will respond to you as soon as possible.",
       "send_detailed_inquiry": "Send Detailed Inquiry",
-      "or_contact_directly": "Or contact us directly through the methods below",
       "direct_contact_methods": "Direct Contact Methods",
       "whatsapp": "WhatsApp",
       "chat_directly": "Chat with us directly",
@@ -470,6 +472,57 @@
       "success": "Thank you! We'll contact you within 24 hours.",
       "error": "Something went wrong. Please try again."
     },
+    "location": {
+      "badge": "Strategic Location",
+      "description": "SkyCourt Mall is located in the heart of the North Coast in Sidi Abdel Rahman at kilometer 136, directly on the Alexandria-Marsa Matrouh road and opposite the major tourist villages, making it a major attraction for residents and visitors alike. The mall is classified as one of the largest malls in terms of area in the Arab Republic of Egypt and the largest ever in terms of area and technical and service capabilities on the North Coast."
+    },
+    "hero": {
+      "title": "A Partner in Your Success",
+      "subtitle": "Join the largest commercial destination on the North Coast",
+      "stats": {
+        "0": {
+          "label": "Parking Spaces"
+        },
+        "1": {
+          "label": "The Largest Mall on the Coast"
+        },
+        "2": {
+          "label": "Security and Maintenance"
+        }
+      },
+      "cta_primary": "Start Your Inquiry",
+      "cta_secondary": "Learn More"
+    },
+    "visual_stats_grid": {
+      "stats": {
+        "2": {
+          "label": "Green Area"
+        },
+        "3": {
+          "label": "Occupancy Rate"
+        }
+      }
+    },
+    "tenant_testimonials": {
+      "title": "Success Stories from Our Partners",
+      "items": [
+        {
+          "quote": "Joining SkyCourt was the best decision we made. The visitor traffic is unparalleled, and our sales increased by 150% in the first year alone.",
+          "author": "KFC Branch Manager",
+          "result": "150% Sales Increase"
+        },
+        {
+          "quote": "The support we receive from the mall management is exceptional. From marketing to maintenance, everything is handled with high professionalism, allowing us to focus on serving our customers.",
+          "author": "Hardee's Franchisee",
+          "result": "Highest Foot Traffic"
+        },
+        {
+          "quote": "The mall's strategic location on the North Coast makes it a prime destination. We see great turnout throughout the year, not just in the summer season.",
+          "author": "Pizza Hut Team",
+          "result": "High Turnout All Year"
+        }
+      ]
+    },
     "final_cta": {
       "title": "Ready to Grow Your Business?",
       "subtitle": "Join the most successful shopping destination on the North Coast and watch your business thrive.",
@@ -490,12 +543,66 @@
     "final_cta_section": {
       "title": "Ready to be part of the largest mall on the North Coast?",
       "subtitle": "SkyCourt Mall was designed with the comfort and enjoyment of shoppers in mind, offering the best services to tenants. Join us today.",
-      "primary_button": "Talk to the Sales Team Now",
-      "secondary_button": "Book a Tour of the Mall"
+      "primary_button": "Talk to the Sales Team Now"
     },
     "floating_whatsapp_button": {
-      "inquire_now": "Inquire Now"
+      "inquire_now": "Inquire Now",
+      "aria_label": "Inquire Now via WhatsApp"
+    },
+    "inquiry_form": {
+      "title": "Start Your Business Journey with Us",
+      "subtitle": "Fill out the form below and our sales team will contact you shortly.",
+      "submitted_title": "Thank You!",
+      "submitted_subtitle": "Your inquiry has been successfully received. We will contact you soon.",
+      "error": "Please fill in all required fields.",
+      "placeholders": {
+        "full_name": "Full Name / Company Name",
+        "message": "Additional Message"
+      },
+      "space_options": {
+        "clothing": "Clothing",
+        "electronics": "Electronics",
+        "entertainment": "Entertainment",
+        "other": "Other"
+      },
+      "direct_contact_title": "Direct Contact with Sales and Marketing Management",
+      "whatsapp_chat": "Chat with us via WhatsApp",
+      "direct_contact_methods": "Direct Contact Methods",
+      "whatsapp": "WhatsApp",
+      "chat_directly": "Chat with us directly",
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location",
+      "location_address": "SkyCourt Mall - North Coast",
+      "interested_title": "Interested in Renting?",
+      "interested_description": "Use our contact form to send your inquiry with all required details. Our sales team will respond to you as soon as possible.",
+      "send_detailed_inquiry": "Send Detailed Inquiry"
     }
+  },
+  "rentals_page.benefits_timeline": {
+    "title": "Your Journey with SkyCourt",
+    "items": [
+      {
+        "title": "Flexible Contracts",
+        "description": "We offer flexible annual contracts that suit your business needs and growth aspirations."
+      },
+      {
+        "title": "Marketing Support",
+        "description": "Benefit from the mall's ongoing marketing campaigns to increase your brand awareness."
+      },
+      {
+        "title": "Continuous Maintenance",
+        "description": "Our skilled maintenance teams are available around the clock to ensure your business continuity."
+      },
+      {
+        "title": "Professional Management",
+        "description": "We use the latest management systems to ensure a smooth and efficient experience for all tenants."
+      },
+      {
+        "title": "Business Community",
+        "description": "Join a selection of established brands and benefit from an integrated business environment."
+      }
+    ]
   },
   "cafes.title": "Our Cafes",
   "cafes.cafe1.name": "Cilantro",

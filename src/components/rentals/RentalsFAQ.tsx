@@ -64,9 +64,13 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isOpen, onClick }) 
   );
 };
 
-export default function RentalsFAQ() {
+interface RentalsFAQProps {
+  onContactUsClick: () => void;
+}
+
+export default function RentalsFAQ({ onContactUsClick }: RentalsFAQProps) {
   const { t, i18n } = useTranslation();
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleClick = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -83,7 +87,7 @@ export default function RentalsFAQ() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-900 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 text-center">
               {t('rentals_page.faq_section.title')}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center">
@@ -97,7 +101,10 @@ export default function RentalsFAQ() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <button className="bg-scm-green text-white font-semibold py-3 px-6 sm:px-8 rounded-full hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[44px] touch-manipulation w-full sm:w-auto text-center">
+              <button 
+                onClick={onContactUsClick}
+                className="bg-scm-green text-white font-semibold py-3 px-6 sm:px-8 rounded-full hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[44px] touch-manipulation w-full sm:w-auto text-center"
+              >
                 {t('rentals_page.faq_section.contact_us_button')}
               </button>
             </motion.div>

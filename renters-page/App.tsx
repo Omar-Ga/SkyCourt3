@@ -1,7 +1,6 @@
 
 import React, { useRef } from 'react';
 import Header from './components/shared/Header';
-import Footer from './components/shared/Footer';
 import RentalsHero from './components/rentals/RentalsHero';
 import LocationSection from './components/rentals/LocationSection';
 import VisualStatsGrid from './components/rentals/VisualStatsGrid';
@@ -11,10 +10,13 @@ import FacilitiesGrid from './components/rentals/FacilitiesGrid';
 import RentalsFAQ from './components/rentals/RentalsFAQ';
 import InquiryForm from './components/rentals/InquiryForm';
 import FinalCTA from './components/rentals/FinalCTA';
+import Footer from '../src/components/Footer';
 
 import { FaWhatsapp } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 export default function App() {
+  const { t } = useTranslation();
   const inquiryFormRef = useRef<HTMLDivElement>(null);
 
   const scrollToInquiry = () => {
@@ -39,10 +41,10 @@ export default function App() {
       <button 
         onClick={scrollToInquiry}
         className="fixed bottom-6 left-6 z-50 bg-highlight text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-colors flex items-center gap-2"
-        aria-label="استفسر الآن عبر واتساب"
+        aria-label={t('rentals_page.floating_whatsapp_button.aria_label')}
       >
         <FaWhatsapp size={24} />
-        <span className="hidden md:inline">استفسر الآن</span>
+        <span className="hidden md:inline">{t('rentals_page.floating_whatsapp_button.inquire_now')}</span>
       </button>
     </div>
   );

@@ -75,7 +75,7 @@ export default function Stories() {
     <section className="relative py-24 overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <motion.h2
-          className="text-5xl md:text-7xl font-light text-black mb-6"
+          className="text-4xl md:text-5xl font-light text-black mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{}}
@@ -183,8 +183,8 @@ export default function Stories() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-1 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'w-8 bg-scm-green' : 'w-1 bg-white/40'
+              className={`pagination-dot h-2 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'w-8 bg-scm-green' : 'w-4 bg-white/40'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

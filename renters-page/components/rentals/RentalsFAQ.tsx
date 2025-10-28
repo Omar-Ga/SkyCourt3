@@ -3,15 +3,17 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { faqItems } from '../../constants';
 import { FiPlus, FiMinus } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
-const AccordionItem: React.FC<{ item: typeof faqItems[0]; isOpen: boolean; onClick: () => void }> = ({ item, isOpen, onClick }) => {
+const AccordionItem: React.FC<{ item: { question: string, answer: string }; isOpen: boolean; onClick: () => void }> = ({ item, isOpen, onClick }) => {
+  const { t } = useTranslation();
   return (
     <div className="border-b border-gray-200 py-4">
       <button
         onClick={onClick}
         className="w-full flex justify-between items-center text-right"
       >
-        <h3 className="text-lg font-semibold">{item.question}</h3>
+        <h3 className="text-lg font-semibold">{t(item.question)}</h3>
         <div className="text-primary text-2xl">
           {isOpen ? <FiMinus /> : <FiPlus />}
         </div>
@@ -24,7 +26,7 @@ const AccordionItem: React.FC<{ item: typeof faqItems[0]; isOpen: boolean; onCli
             exit={{ opacity: 0, height: 0, marginTop: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
-            <p className="text-gray-600">{item.answer}</p>
+            <p className="text-gray-600">{t(item.answer)}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -34,6 +36,7 @@ const AccordionItem: React.FC<{ item: typeof faqItems[0]; isOpen: boolean; onCli
 
 
 export default function RentalsFAQ() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleClick = (index: number) => {
@@ -45,9 +48,9 @@ export default function RentalsFAQ() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">أسئلة شائعة</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('rentals_page.faq_section.title')}</h2>
             <p className="text-gray-600">
-              كل ما تحتاج معرفته حول فرص التأجير في سكاي كورت مول. لم تجد إجابتك؟ تواصل معنا مباشرة.
+              {t('rentals_page.faq_section.subtitle')}
             </p>
           </div>
           <div className="lg:col-span-2">

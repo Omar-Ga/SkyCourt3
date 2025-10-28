@@ -147,6 +147,12 @@ body {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
+.dark-frosted-glass {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
 
 
 
@@ -217,7 +223,7 @@ body {
   }
 }
 
-/* Mobile touch improvements */
+  /* Mobile touch improvements */
 @media (max-width: 768px) {
   button, a, [role="button"] {
     touch-action: manipulation;
@@ -230,5 +236,15 @@ body {
   .mobile-touch-target {
     padding: 8px;
     margin: 2px;
+  }
+
+  .pagination-dot {
+    min-width: 0px !important;
+    min-height: 0px !important;
+    width: 16px !important; /* w-4 equivalent */
+    height: 8px !important;  /* h-2 equivalent */
+  }
+  .pagination-dot.w-8 {
+    width: 32px !important; /* w-8 equivalent */
   }
 }

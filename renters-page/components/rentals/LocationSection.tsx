@@ -2,8 +2,10 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { MdLocationOn, MdMap, MdBusiness } from 'react-icons/md';
+import { useTranslation } from 'react-i18next';
 
 export default function LocationSection() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,22 +28,21 @@ export default function LocationSection() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">الموقع الاستراتيجي</h2>
           <p className="text-lg md:text-xl leading-relaxed mb-8">
-            يقع مول سكاي كورت في قلب الساحل الشمالي في مدينة سيدي عبدالرحمن عند الكيلو 136، مباشرة على طريق الاسكندرية – مرسى مطروح وفي مقابل القرى السياحية الكبرى، مما يجعله نقطة جذب رئيسية للسكان والزوار على حد سواء.
+            {t('rentals_page.location.description')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col items-center">
               <MdLocationOn className="text-highlight" size={40} />
-              <p className="mt-2 font-semibold">الكيلو 136 طريق الإسكندرية-مرسى مطروح</p>
+              <p className="mt-2 font-semibold">{t('rentals_page.location.features.0')}</p>
             </div>
             <div className="flex flex-col items-center">
               <MdMap className="text-highlight" size={40} />
-              <p className="mt-2 font-semibold">مقابل القرى السياحية مباشرة</p>
+              <p className="mt-2 font-semibold">{t('rentals_page.location.features.1')}</p>
             </div>
             <div className="flex flex-col items-center">
               <MdBusiness className="text-highlight" size={40} />
-              <p className="mt-2 font-semibold">أكبر مول على الساحل الشمالي</p>
+              <p className="mt-2 font-semibold">{t('rentals_page.location.features.2')}</p>
             </div>
           </div>
         </motion.div>

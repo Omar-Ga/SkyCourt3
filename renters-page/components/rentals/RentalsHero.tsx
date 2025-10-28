@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useCountUp } from '../../hooks/useCountUp';
 import { FiChevronDown } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 interface StatProps {
   value: number;
@@ -11,13 +12,14 @@ interface StatProps {
 }
 
 const Stat: React.FC<StatProps> = ({ value, label, suffix }) => {
+  const { t } = useTranslation();
   const countUpRef = useCountUp(value);
   return (
     <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center border border-white/20">
       <h3 className="text-4xl lg:text-5xl font-bold">
         <span ref={countUpRef}>0</span>{suffix}
       </h3>
-      <p className="text-lg mt-1">{label}</p>
+      <p className="text-lg mt-1">{t(label)}</p>
     </div>
   );
 };
@@ -28,7 +30,7 @@ interface RentalsHeroProps {
 }
 
 export default function RentalsHero({ onInquireClick }: RentalsHeroProps) {
-
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -63,16 +65,16 @@ export default function RentalsHero({ onInquireClick }: RentalsHeroProps) {
         animate="visible"
       >
         <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight">
-          شريك في نجاحك
+          {t('rentals_page.hero.title')}
         </motion.h1>
         <motion.p variants={itemVariants} className="mt-4 text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
-          انضم إلى أكبر وجهة تجارية على الساحل الشمالي
+          {t('rentals_page.hero.subtitle')}
         </motion.p>
         
         <motion.div variants={itemVariants} className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          <Stat value={1000} suffix="+" label="موقف سيارة" />
-          <Stat value={1} label="أكبر مول بالساحل" />
-          <Stat value={24} suffix="/7" label="أمن وصيانة" />
+          <Stat value={1000} suffix="+" label="about.stats.0.label" />
+          <Stat value={1} label="rentals_page.hero.stats.1.label" />
+          <Stat value={24} suffix="/7" label="rentals_page.hero.stats.2.label" />
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-12">
@@ -80,7 +82,7 @@ export default function RentalsHero({ onInquireClick }: RentalsHeroProps) {
             onClick={onInquireClick}
             className="bg-highlight text-white font-bold py-4 px-12 rounded-full text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            استفسر الآن
+            {t('rentals_page.floating_whatsapp_button.inquire_now')}
           </button>
         </motion.div>
       </motion.div>

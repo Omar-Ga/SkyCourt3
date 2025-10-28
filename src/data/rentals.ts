@@ -5,7 +5,6 @@ export interface StatItem {
   value: number;
   label: string;
   suffix: string;
-  imageUrl: string;
 }
 
 export interface FaqItem {
@@ -37,10 +36,6 @@ export const faqItems: FaqItem[] = [
     answer: 'تتوفر مساحات متباينة ومختلفة من المتوسطة والكبيرة حسب رغبة المستأجر وطبيعة النشاط التجاري.',
   },
   {
-    question: 'هل يوجد دعم تسويقي للمستأجرين؟',
-    answer: 'نعم، نوفر كافة الخدمات والتسهيلات للمستأجرين، بما في ذلك الدعم التسويقي عبر الحملات الإعلانية للمول والفعاليات المستمرة.',
-  },
-  {
     question: 'كيف يتم التعامل مع الصيانة؟',
     answer: 'لدينا فريق صيانة من أمهر الفنيين يعمل على مدار الساعة لضمان حل أي مشكلة تتعلق بالسباكة، الكهرباء، أو الزراعة فوراً.',
   },
@@ -56,18 +51,19 @@ export const faqItems: FaqItem[] = [
 
 // Statistics items (restored - may be used elsewhere)
 export const statsItems: StatItem[] = [
-  { value: 1000, label: "موقف سيارة", suffix: "+", imageUrl: "https://picsum.photos/seed/parking/600/800" },
-  { value: 24, label: "أمن وصيانة", suffix: "/7", imageUrl: "https://picsum.photos/seed/security/600/800" },
-  { value: 50000, label: "مساحة خضراء", suffix: "م²", imageUrl: "https://picsum.photos/seed/greenery/600/800" },
-  { value: 95, label: "نسبة الإشغال", suffix: "%", imageUrl: "https://picsum.photos/seed/occupancy/600/800" }
+  { value: 1000, label: "موقف سيارة", suffix: "+", imageUrl: "" },
+  { value: 24, label: "أمن وصيانة", suffix: "/7", imageUrl: "" },
+  { value: 50000, label: "مساحة خضراء", suffix: "م²", imageUrl: "" },
+  { value: 95, label: "نسبة الإشغال", suffix: "%", imageUrl: "" }
 ];
 
 // Facilities available at the mall
 export const facilities: FacilityItem[] = [
-  { title: "مواقف سيارات", description: "مواقف سيارات تتسع لأكثر من 1000 سيارة وتدار بواسطة شركة متخصصة.", imageUrl: "https://picsum.photos/seed/parkinglot/800/600", gridSpan: "md:col-span-2 md:row-span-2" },
-  { title: "المساحات الخضراء", description: "مساحات خضراء كبيرة جداً للاسترخاء والاستمتاع.", imageUrl: "https://picsum.photos/seed/gardens/600/400", gridSpan: "md:col-span-1" },
-  { title: "شلالات المياه", description: "شلالات مياه رائعة تضيف لمسة جمالية للمكان.", imageUrl: "https://picsum.photos/seed/waterfall/600/400", gridSpan: "md:col-span-1" },
-  { title: "فريق الصيانة", description: "صيانة على مدار الساعة (سباكة، كهرباء، زراعة).", imageUrl: "https://picsum.photos/seed/maintenance_team/600/400", gridSpan: "md:col-span-1" },
-  { title: "الأمن المحترف", description: "شركة أمن محترفة ومتخصصة لضمان سلامة الجميع.", imageUrl: "https://picsum.photos/seed/pro_security/600/400", gridSpan: "md:col-span-1" },
-  { title: "الإدارة الحديثة", description: "طرق إدارة حديثة للتعامل مع المستأجرين.", imageUrl: "https://picsum.photos/seed/management/600/400", gridSpan: "md:col-span-2" }
+  { title: "براندات عالمية", description: "مواقف سيارات تتسع لأكثر من 1000 سيارة وتدار بواسطة شركة متخصصة.", imageUrl: "" , gridSpan: "md:col-span-1" },
+  { title: "مواقف سيارات", description: "وصف للمرفق الجديد", imageUrl: "" , gridSpan: "md:col-span-1" },
+  { title: "امن على مدار الساعه", description: "مساحات خضراء كبيرة جداً للاسترخاء والاستمتاع.", imageUrl: "" , gridSpan: "md:col-span-1" },
+  { title: "مساحات خضراء", description: "شلالات مياه رائعة تضيف لمسة جمالية للمكان.", imageUrl: "" , gridSpan: "md:col-span-1" },
+  { title: "شلالات مياة", description: "صيانة على مدار الساعة (سباكة، كهرباء، زراعة).", imageUrl: "" , gridSpan: "md:col-span-1" },
+  { title: "العاب اطفال", description: "شركة أمن محترفة ومتخصصة لضمان سلامة الجميع.", imageUrl: "" , gridSpan: "md:col-span-1" },
+  { title: "فريق صيانه محترف على مدار الساعه", description: "طرق إدارة حديثة للتعامل مع المستأجرين.", imageUrl: "/rentals/professional_maintenance.png" , gridSpan: "md:col-span-2" }
 ];

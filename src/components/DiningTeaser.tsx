@@ -16,7 +16,7 @@ export default function DiningTeaser() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.5 }}
-          className="text-4xl md:text-6xl font-light text-white mb-4"
+          className="text-3xl md:text-5xl font-light text-white mb-4"
         >
           {t('dining_headline')}
         </motion.h2>

@@ -62,7 +62,7 @@ export default function Home() {
 
         <section className="relative py-20 px-6 overflow-hidden">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-black"
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-light text-black"
               style={{ lineHeight: 1.2 }}>
               {t('experience_shopping')}
             </h2>

@@ -5,34 +5,14 @@ import { ChevronDown, Mouse } from 'lucide-react';
 import { RotatingText } from './ui/shadcn-io/rotating-text';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NAV_ITEMS, type NavItem } from '../data/navigation';
+import { useIsMobile } from '../hooks/use-mobile';
 
-const images = [
-  '/hero section/hero1.webp',
-  '/hero section/Glowing_skycourt.webp',
-  '/hero section/entrance darker.webp',
-  '/hero section/wideview.webp',
-  '/hero section/cafe-with-waterfall.webp',
-];
+
 
 const Hero = forwardRef<HTMLElement>((_, ref) => {
   const { t } = useTranslation();
   const [textVisible, setTextVisible] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const location = useLocation();
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => setTextVisible(true), 800);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // 2s fade + 5s visible
-
-    return () => clearInterval(interval);
-  }, []);
 
   const headline = t('hero_headline');
 
@@ -87,18 +67,7 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
         }}
       />
 
-      <AnimatePresence>
-        <motion.img
-          key={currentImageIndex}
-          src={images[currentImageIndex]}
-          alt="SkyCourt Mall"
-          className="absolute inset-0 w-full h-full object-cover"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 2, ease: 'easeInOut' }}
-        />
-      </AnimatePresence>
+
 
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-6">
         <motion.h1
@@ -148,8 +117,6 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
           animate={{ y: [0, 10, 0] }}
           transition={{
             duration: 1.5,
-            repeat: Infinity,
-            repeatType: "loop",
           }}
           className="flex flex-col items-center"
         >

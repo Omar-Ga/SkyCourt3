@@ -2,8 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { timelineItems } from '../../constants';
+import { useTranslation } from 'react-i18next';
 
 export default function BenefitsTimeline() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: {},
     visible: {
@@ -21,7 +23,7 @@ export default function BenefitsTimeline() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">رحلتك مع سكاي كورت</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">{t('rentals_page.benefits_timeline.title')}</h2>
         <motion.div
           className="relative max-w-2xl mx-auto"
           initial="hidden"
@@ -41,8 +43,8 @@ export default function BenefitsTimeline() {
                 <item.icon className="mx-auto text-white" size={24} />
               </div>
               <div className={`order-1 ${index % 2 === 0 ? 'bg-gray-100' : 'bg-highlight/10'} rounded-lg shadow-xl w-5/12 px-6 py-4`}>
-                <h3 className="font-bold text-lg mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-snug">{item.description}</p>
+                <h3 className="font-bold text-lg mb-1">{t(item.title)}</h3>
+                <p className="text-sm text-gray-600 leading-snug">{t(item.description)}</p>
               </div>
             </motion.div>
           ))}
