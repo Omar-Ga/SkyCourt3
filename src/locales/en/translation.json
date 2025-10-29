@@ -160,11 +160,6 @@
       "description": "All your needs, anytime. Our supermarket is open 24/7 for your convenience.",
       "image": "/home_images/supermarket.webp",
       "objectPosition": "top"
-    },
-    {
-      "title": "Cafes & Eateries",
-      "description": "From a quick coffee to a relaxing lunch, choose from our diverse selection of cafes.",
-      "image": "/home_images/open_setting_edited.webp"
     }
   ],
   "testimonials": [
@@ -187,11 +182,7 @@
       "location": "Alexandria"
     }
   ],
-  "cafes": "Cafes",
   "contact": "Contact",
-  "cafes_section_badge": "Our Cafes",
-  "cafes_headline_prefix": "Discover Our",
-  "cafes_subheadline": "From a quick coffee to a relaxing lunch, choose from our diverse selection of cafes.",
   "eateries": {
     "kfc": {
       "name": "KFC",
@@ -525,21 +516,5 @@
         "description": "Join a selection of established brands and benefit from an integrated business environment."
       }
     ]
-  },
-  "cafes.title": "Our Cafes",
-  "cafes.cafe1.name": "Cilantro",
-  "cafes.cafe1.tagline": "Freshly brewed coffee and delicious pastries.",
-  "cafes.cafe1.detail1": "A cozy and inviting atmosphere.",
-  "cafes.cafe1.detail2": "Perfect for a morning coffee or an afternoon break.",
-  "cafes.cafe1.detail3": "A wide selection of sandwiches and salads.",
-  "cafes.cafe2.name": "Beano's",
-  "cafes.cafe2.tagline": "A vibrant and modern coffee experience.",
-  "cafes.cafe2.detail1": "Specialty coffee and artisanal pastries.",
-  "cafes.cafe2.detail2": "A great place to work or socialize.",
-  "cafes.cafe2.detail3": "A lively and energetic atmosphere.",
-  "cafes.cafe3.name": "Costa Coffee",
-  "cafes.cafe3.tagline": "The nation's favorite coffee shop.",
-  "cafes.cafe3.detail1": "A wide range of coffee and tea.",
-  "cafes.cafe3.detail2": "A comfortable and relaxing environment.",
-  "cafes.cafe3.detail3": "A selection of cakes and snacks."
+  }
 }

@@ -10,8 +10,6 @@ const images = [
   '/hero section/Glowing_skycourt.webp',
   '/hero section/entrance darker.webp',
   '/hero section/wideview.webp',
-  '/hero section/cafe-with-waterfall.webp',
-
   '/hero section/skycourt-shopping-bag.webp',
 ];
 
