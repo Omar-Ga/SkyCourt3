@@ -1,0 +1,53 @@
+{
+  "about": {
+    "stories": [
+      {
+        "title": "The Largest Shopping Complex on the North Coast",
+        "content": "SkyCourt Mall is one of the largest shopping complexes in Egypt and the largest on the North Coast, located on the Alexandria - Marsa Matrouh road at Kilometer 137. The mall features a vast collection of stores representing the most famous international and local brands, including clothing, beachwear, restaurants, antiques, cafes, and much more.",
+        "image": "/about_images/story_1.webp"
+      },
+      {
+        "title": "Safe and Spacious Parking",
+        "content": "SkyCourt Mall offers large and secure parking facilities with a capacity exceeding 1000 vehicles. Our visitors are served by a specialized and professional parking management team to ensure an exceptional service experience.",
+        "image": "/about_images/story_2.webp"
+      },
+      {
+        "title": "Safe Play Area for Children",
+        "content": "SkyCourt Mall features a large play area dedicated to children aged 3 to 4 years. This area is managed by a professional team trained with the latest methods in handling children of this age group, and all games are completely safe for children.",
+        "image": "/about_images/story_3.webp"
+      },
+      {
+        "title": "A Safe Place for Family and Friends",
+        "content": "SkyCourt Mall is a safe haven for families and friends, where we provide all safety measures for visitors around the clock through our trained and professional security team who can handle all circumstances, allowing visitors to shop and stroll with complete freedom throughout the mall.",
+        "image": "/about_images/story_4.webp"
+      },
+      {
+        "title": "Professional Management and Distinguished Service",
+        "content": "SkyCourt Mall in all its aspects is managed by a professional administrative team aimed at achieving the highest visitor satisfaction using the latest management methods.",
+        "image": "/about_images/story_5.webp"
+      }
+    ],
+    "stats": [
+      {
+        "number": 1000,
+        "label": "Parking Spaces",
+        "suffix": "+"
+      },
+      {
+        "number": 50,
+        "label": "Stores & Restaurants",
+        "suffix": "+"
+      },
+      {
+        "number": 24,
+        "label": "Hours Open",
+        "suffix": "/7"
+      }
+    ],
+    "stats_title": "SkyCourt by the Numbers",
+    "hero_title": "About Us",
+    "hero_subtitle": "A journey to the heart of excellence and hospitality",
+    "closing_title": "Welcome to SkyCourt",
+    "closing_text": "Your ideal destination for shopping, entertainment, and creating unforgettable memories with family and friends"
+  }
+}

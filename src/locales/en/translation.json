@@ -2,8 +2,6 @@
   "home": "Home",
   "about_us": "About Us",
   "dining": "Dining",
-  "why_choose_skycourt": "Why Choose SkyCourt?",
-  "experience_shopping": "Experience shopping like never before with our world-class amenities and services",
   "features": [
     {
       "key": "premium_shopping",
@@ -41,7 +39,6 @@
     "all your favorite brands.",
     "unforgettable moments."
   ],
-  "iconic_brands": "Iconic brands at SkyCourt",
   "brands": [
     {
       "name": "B-Tech"
@@ -190,29 +187,11 @@
       "location": "Alexandria"
     }
   ],
-  "visit_us_today": "Visit Us Today",
-  "find_us_in_the_heart": "Find us in the heart of the city - easily accessible by car or public transport",
-  "address": "Address",
-  "address_details": "sidi abdelrehman - al sahel al shamaly<br />alexandria road - the 137 kilo road",
-  "opening_hours": "Opening Hours",
-  "opening_hours_details": "Open 24/7 Saturday through Friday",
-  "email": "Email",
-  "email_details": "info@skycourt.com",
-  "interactive_map_coming_soon": "Interactive Map Coming Soon",
-  "discover_restaurants": "Discover Our restaurants",
-  "skycourt": "SkyCourt",
-  "hero_headline": "SkyCourt Mall",
-  "nav_brands": "Brands",
-  "nav_services": "Services",
-  "dining_headline": "Dining at SkyCourt",
-  "dining_subheadline": "Explore a curated selection of cafes and restaurants.",
   "cafes": "Cafes",
-  "location": "Location",
   "contact": "Contact",
   "cafes_section_badge": "Our Cafes",
   "cafes_headline_prefix": "Discover Our",
   "cafes_subheadline": "From a quick coffee to a relaxing lunch, choose from our diverse selection of cafes.",
-  "stories_title": "Services",
   "eateries": {
     "kfc": {
       "name": "KFC",
@@ -338,7 +317,6 @@
   "contact_us_send": "Send Message",
   "contact_us_sending": "Sending...",
   "contact_us_success": "Form Submitted Successfully",
-  "email_link": "Contact Us",
   "careers": "Careers",
   "careers_join_our_team": "Join Our Team",
   "careers_subtitle": "Build the future with us. Explore opportunities to grow your career and make an impact.",
@@ -346,7 +324,6 @@
   "careers_apply_now": "Apply Now",
   "careers_dont_see_role": "Don't see the right role?",
   "careers_send_resume": "Send us your resume",
-  "careers_link": "Careers",
   "rentals": "Business Partners",
   "rentals_page": {
     "hero": {

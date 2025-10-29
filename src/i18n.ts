@@ -4,6 +4,10 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from './locales/en/translation.json';
 import arTranslation from './locales/ar/translation.json';
+import enHomeTranslation from './locales/en/home.json';
+import arHomeTranslation from './locales/ar/home.json';
+import enAboutTranslation from './locales/en/about.json';
+import arAboutTranslation from './locales/ar/about.json';
 
 // Add RTL direction support
 declare module 'i18next' {
@@ -18,10 +22,10 @@ i18n
   .init({
     resources: {
       en: {
-        translation: enTranslation,
+        translation: { ...enTranslation, ...enHomeTranslation, ...enAboutTranslation },
       },
       ar: {
-        translation: arTranslation,
+        translation: { ...arTranslation, ...arHomeTranslation, ...arAboutTranslation },
       },
     },
     fallbackLng: 'en',
