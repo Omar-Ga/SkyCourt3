@@ -1,0 +1,16 @@
+{
+  "contact_us_sending": "جار الإرسال...",
+  "contact_us_success": "تم إرسال النموذج بنجاح",
+  "contact_us_title": "تواصل معنا",
+  "contact_us_subtitle": "يسعدنا أن نسمع منك. يرجى ملء النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن.",
+  "contact_us_name": "اسمك",
+  "contact_us_email": "بريدك الإلكتروني",
+  "contact_us_message": "رسالتك",
+  "contact_us_send": "إرسال الرسالة",
+  "contact_us_direct_title": "أو تواصل معنا مباشرة",
+  "contact_us_direct_subtitle": "",
+  "contact_us_phone": "هاتف",
+  "contact_us_email_button": "بريد إلكتروني",
+  "contact_us_whatsapp": "واتساب",
+  "contact_us_chat_with_us": "تحدث معنا"
+}

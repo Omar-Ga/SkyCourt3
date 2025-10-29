@@ -8,6 +8,18 @@ import enHomeTranslation from './locales/en/home.json';
 import arHomeTranslation from './locales/ar/home.json';
 import enAboutTranslation from './locales/en/about.json';
 import arAboutTranslation from './locales/ar/about.json';
+import enCareersTranslation from './locales/en/careers.json';
+import arCareersTranslation from './locales/ar/careers.json';
+import enContactUsTranslation from './locales/en/contactus.json';
+import arContactUsTranslation from './locales/ar/contactus.json';
+import enDiningTranslation from './locales/en/dining.json';
+import arDiningTranslation from './locales/ar/dining.json';
+import enRentalsTranslation from './locales/en/rentals.json';
+import arRentalsTranslation from './locales/ar/rentals.json';
+import enServicesTranslation from './locales/en/services.json';
+import arServicesTranslation from './locales/ar/services.json';
+import enTestimonialsTranslation from './locales/en/testimonials.json';
+import arTestimonialsTranslation from './locales/ar/testimonials.json';
 
 // Add RTL direction support
 declare module 'i18next' {
@@ -22,10 +34,10 @@ i18n
   .init({
     resources: {
       en: {
-        translation: { ...enTranslation, ...enHomeTranslation, ...enAboutTranslation },
+        translation: { ...enTranslation, ...enHomeTranslation, ...enAboutTranslation, ...enCareersTranslation, ...enContactUsTranslation, ...enDiningTranslation, ...enRentalsTranslation, ...enServicesTranslation, ...enTestimonialsTranslation },
       },
       ar: {
-        translation: { ...arTranslation, ...arHomeTranslation, ...arAboutTranslation },
+        translation: { ...arTranslation, ...arHomeTranslation, ...arAboutTranslation, ...arCareersTranslation, ...arContactUsTranslation, ...arDiningTranslation, ...arRentalsTranslation, ...arServicesTranslation, ...arTestimonialsTranslation },
       },
     },
     fallbackLng: 'en',

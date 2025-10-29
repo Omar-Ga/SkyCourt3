@@ -1,0 +1,15 @@
+{
+  "services": [
+    {
+      "title": "منطقة للأطفال",
+      "description": "مكان آمن وممتع للأطفال لتستمتع بتسوّقك براحة بال.",
+      "image": "/home_images/kids_area.webp"
+    },
+    {
+      "title": "سوبرماركت ٢٤ ساعة",
+      "description": "كل احتياجاتك متوفرة على مدار الساعة — تسوّق بسهولة وقت ما تحب.",
+      "image": "/home_images/supermarket.webp",
+      "objectPosition": "top"
+    }
+  ]
+}

@@ -22,7 +22,7 @@ type Testimonial = {
 type Story = Service | Testimonial;
 
 export default function Stories() {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(['services', 'testimonials']);
   const services = t('services', { returnObjects: true }) as { title: string; description: string; image: string; objectPosition?: string }[];
   const testimonials = t('testimonials', { returnObjects: true }) as { name: string; rating: number; comment: string; location: string }[];
 
@@ -75,7 +75,7 @@ export default function Stories() {
     <section className="relative py-24 overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <motion.h2
-          className="text-4xl md:text-5xl font-light text-black mb-6"
+          className="text-4xl md:text-5xl font-light text-white mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{}}
@@ -106,7 +106,7 @@ export default function Stories() {
                 />
                 <div className="absolute inset-0 z-20 flex flex-col justify-end p-12 md:p-20">
                   <motion.h3
-            className="text-4xl md:text-5xl font-light text-black mb-6"
+            className="text-4xl md:text-5xl font-light text-white mb-6"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}

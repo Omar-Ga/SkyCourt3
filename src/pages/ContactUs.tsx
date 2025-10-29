@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { User, Mail, MessageSquare, Send } from 'lucide-react';
+import { User, Mail, MessageSquare, Send, Phone, MessageCircle } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -95,6 +95,54 @@ export default function ContactUs() {
             {result && (
               <p className="mt-6 text-center font-medium text-gray-800">{result}</p>
             )}
+          </div>
+        </div>
+
+        {/* Direct Contact Methods */}
+        <div className="mt-12 max-w-2xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-light text-black mb-2">{t('contact_us_direct_title')}</h2>
+            <p className="text-gray-600">{t('contact_us_direct_subtitle')}</p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* Phone Button */}
+            <a
+              href="tel:+201234567890"
+              className="flex flex-col items-center justify-center p-6 bg-white/50 rounded-xl shadow-lg backdrop-blur-lg hover:bg-white/70 transition-all duration-300 transform hover:scale-105 group"
+            >
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3 group-hover:bg-blue-200 transition-colors">
+                <Phone className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-800 mb-1">{t('contact_us_phone')}</h3>
+              <p className="text-sm text-gray-600">+20 123 456 7890</p>
+            </a>
+
+            {/* Email Button */}
+            <a
+              href="mailto:info@skycourt.com"
+              className="flex flex-col items-center justify-center p-6 bg-white/50 rounded-xl shadow-lg backdrop-blur-lg hover:bg-white/70 transition-all duration-300 transform hover:scale-105 group"
+            >
+              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-3 group-hover:bg-gray-200 transition-colors">
+                <Mail className="w-6 h-6 text-gray-600" />
+              </div>
+              <h3 className="font-semibold text-gray-800 mb-1">{t('contact_us_email_button')}</h3>
+              <p className="text-sm text-gray-600">info@skycourt.com</p>
+            </a>
+
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/201234567890?text=Hello%2C%20I%20would%20like%20to%20get%20in%20touch%20with%20SkyCourt%20Mall"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center p-6 bg-white/50 rounded-xl shadow-lg backdrop-blur-lg hover:bg-white/70 transition-all duration-300 transform hover:scale-105 group"
+            >
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3 group-hover:bg-green-200 transition-colors">
+                <MessageCircle className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="font-semibold text-gray-800 mb-1">{t('contact_us_whatsapp')}</h3>
+              <p className="text-sm text-gray-600">{t('contact_us_chat_with_us')}</p>
+            </a>
           </div>
         </div>
       </main>

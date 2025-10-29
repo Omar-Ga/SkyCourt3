@@ -1,0 +1,15 @@
+{
+  "services": [
+    {
+      "title": "Safe & Fun Kids Area",
+      "description": "Enjoy peace of mind with our fully enclosed and supervised play space for your children.",
+      "image": "/home_images/kids_area.webp"
+    },
+    {
+      "title": "24-Hour Supermarket",
+      "description": "All your needs, anytime. Our supermarket is open 24/7 for your convenience.",
+      "image": "/home_images/supermarket.webp",
+      "objectPosition": "top"
+    }
+  ]
+}

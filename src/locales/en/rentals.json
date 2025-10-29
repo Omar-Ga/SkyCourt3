@@ -1,0 +1,26 @@
+{
+  "rentals_page": {
+    "hero": {
+      "title": "Your Business Deserves the Best",
+      "subtitle": "Join the most successful shopping destination on the North Coast",
+      "cta_primary": "Start Your Inquiry"
+    },
+    "location": {
+      "description": "SkyCourt Mall is strategically located on the Alexandria-Marsa Matrouh road at kilometer 137, making it the premier destination for tourists and residents alike."
+    },
+    "inquiry_form": {
+      "title": "Ready to Join SkyCourt?",
+      "interested_title": "Interested in Renting?",
+      "interested_description": "Use our contact form to send your inquiry with all required details. Our sales team will respond to you as soon as possible.",
+      "send_detailed_inquiry": "Send Detailed Inquiry",
+      "direct_contact_methods": "Direct Contact Methods",
+      "whatsapp": "WhatsApp",
+      "chat_directly": "Chat with us directly",
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location",
+      "location_address": "SkyCourt Mall - North Coast"
+    }
+  },
+  "contact_us": "Contact Us"
+}
