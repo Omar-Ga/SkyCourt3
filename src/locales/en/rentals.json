@@ -20,6 +20,50 @@
       "email": "Email",
       "location": "Location",
       "location_address": "SkyCourt Mall - North Coast"
+    },
+    "facilities": {
+      "badge": "World-Class Facilities",
+      "title": "Everything Your Business Needs",
+      "items": [
+        {
+          "title": "Parking",
+          "description": "Ample parking for over 1000 cars, professionally managed for your convenience and peace of mind."
+        },
+        {
+          "title": "Green Spaces and Waterfalls",
+          "description": "Adding aesthetic appeal and a wonderful atmosphere of joy for shoppers."
+        },
+        {
+          "title": "Maintenance Teams",
+          "description": "Professional maintenance teams are available 24/7, ensuring immediate and efficient service for all tenants."
+        },
+        {
+          "title": "Advanced Management Systems",
+          "description": "Professional administrative team using latest management methods to organize work and improve performance."
+        },
+        {
+          "title": "International Brands",
+          "description": "Host your brand alongside a curated selection of world-renowned retail and dining establishments."
+        },
+        {
+          "title": "24/7 Security",
+          "description": "A trained and professional security team ensures the safety and security of all visitors and tenants around the clock."
+        }
+      ]
+    },
+    "facilities_grid": {
+      "title": "World-Class Facilities",
+      "subtitle": "Enjoy advanced and integrated facilities that ensure comfort and ease of work in a professional environment."
+    },
+    "faq_section": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about rental opportunities at SkyCourt Mall. Didn't find your answer? Contact us directly.",
+      "contact_us_button": "Contact Us"
+    },
+    "final_cta_section": {
+      "title": "Ready to be part of the largest mall on the North Coast?",
+      "subtitle": "SkyCourt Mall was designed with the comfort and enjoyment of shoppers in mind, offering the best services to tenants. Join us today.",
+      "primary_button": "Talk to the Sales Team Now"
     }
   },
   "contact_us": "Contact Us"
