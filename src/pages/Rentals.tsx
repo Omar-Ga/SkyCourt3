@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import RentalsHero from '../components/rentals/RentalsHero';
 import LocationSection from '../components/rentals/LocationSection';
 import FacilitiesGrid from '../components/rentals/FacilitiesGrid';
-import RentalsFAQ from '../components/rentals/RentalsFAQ';
+
 import InquiryForm from '../components/rentals/InquiryForm';
 import FinalCTA from '../components/rentals/FinalCTA';
 import FloatingWhatsAppButton from '../components/rentals/FloatingWhatsAppButton';
@@ -33,7 +33,7 @@ export default function Rentals() {
         <LocationSection />
         <FacilitiesGrid />
 
-        <RentalsFAQ onContactUsClick={scrollToInquiry} />
+        
         <InquiryForm ref={inquiryFormRef} />
         <FinalCTA onPrimaryClick={scrollToInquiry} />
       </main>

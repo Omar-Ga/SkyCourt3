@@ -7,45 +7,12 @@ export interface StatItem {
   suffix: string;
 }
 
-export interface FaqItem {
-  question: string;
-  answer: string;
-}
-
-
-
-
-
 export interface FacilityItem {
   imageUrl: string;
   gridSpan: string;
 }
 
 
-
-// FAQ items for common rental questions
-export const faqItems: FaqItem[] = [
-  {
-    question: 'ما هي مدة العقد الإيجاري؟',
-    answer: 'يتم التأجير بعقود سنوية أو أكثر حسب المساحة والتميز والموقع داخل المول.',
-  },
-  {
-    question: 'ما المساحات المتاحة حاليا؟',
-    answer: 'تتوفر مساحات متباينة ومختلفة من المتوسطة والكبيرة حسب رغبة المستأجر وطبيعة النشاط التجاري.',
-  },
-  {
-    question: 'كيف يتم التعامل مع الصيانة؟',
-    answer: 'لدينا فريق صيانة من أمهر الفنيين يعمل على مدار الساعة لضمان حل أي مشكلة تتعلق بالسباكة، الكهرباء، أو الزراعة فوراً.',
-  },
-  {
-    question: 'من هم المستأجرون الحاليون؟',
-    answer: 'نفخر باستضافة كبرى الشركات والعلامات التجارية العالمية والمحلية الشهيرة، مما يخلق بيئة تجارية غنية ومتنوعة.',
-  },
-  {
-    question: 'كيف يمكنني معاينة المساحات؟',
-    answer: 'يمكنك التواصل معنا مباشرة عبر نموذج الاستفسار أو أرقام الهواتف الموضحة لترتيب جولة خاصة في المول.',
-  },
-];
 
 // Statistics items (restored - may be used elsewhere)
 export const statsItems: StatItem[] = [
