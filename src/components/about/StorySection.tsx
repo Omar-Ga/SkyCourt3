@@ -32,7 +32,7 @@ export default function StorySection({ title, content, image, index, totalStorie
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center pt-10 pb-10 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-10 pb-1 overflow-hidden"
       dir={i18n.dir()}
     >
       <div className="max-w-7xl mx-auto px-6 w-full">

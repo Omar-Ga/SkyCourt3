@@ -6,7 +6,15 @@
       "cta_primary": "Start Your Inquiry"
     },
     "location": {
-      "description": "SkyCourt Mall is strategically located on the Alexandria-Marsa Matrouh road at kilometer 137, making it the premier destination for tourists and residents alike."
+      "badge": "Strategic Location",
+      "title": "In the Heart of the North Coast",
+      "description": "SkyCourt Mall is strategically located on the Alexandria-Marsa Matrouh road at kilometer 137, making it the premier destination for tourists and residents alike.",
+      "features": [
+        "Kilometer 136 Alexandria-Marsa Matrouh Road",
+        "Directly opposite tourist villages",
+        "Largest mall on the North Coast",
+        "Easy accessibility for customers and suppliers"
+      ]
     },
     "inquiry_form": {
       "title": "Ready to Join SkyCourt?",
@@ -54,6 +62,81 @@
     "facilities_grid": {
       "title": "World-Class Facilities",
       "subtitle": "Enjoy advanced and integrated facilities that ensure comfort and ease of work in a professional environment."
+    },
+    "faq": {
+      "badge": "Frequently Asked Questions",
+      "title": "Everything You Need to Know",
+      "items": [
+        {
+          "question": "What is the lease term?",
+          "answer": "Leasing is done with annual contracts or more depending on the area, distinction and location within the mall."
+        },
+        {
+          "question": "What spaces are currently available?",
+          "answer": "Various and different spaces are available, from medium to large, according to the tenant's desire and the nature of the commercial activity."
+        },
+        {
+          "question": "Is there marketing support for tenants?",
+          "answer": "Yes, we provide all services and facilities for tenants, including marketing support through mall advertising campaigns and ongoing events."
+        },
+        {
+          "question": "How is maintenance handled?",
+          "answer": "We have a maintenance team of the most skilled technicians working around the clock to ensure any problem related to plumbing, electricity, or landscaping is resolved immediately."
+        },
+        {
+          "question": "Who are the current tenants?",
+          "answer": "We are proud to host major international and famous local companies and brands, creating a rich and diverse business environment."
+        },
+        {
+          "question": "How can I view the spaces?",
+          "answer": "You can contact us directly through the inquiry form or the phone numbers shown to arrange a private tour of the mall."
+        }
+      ]
+    },
+    "tenant_testimonials": {
+      "title": "Success Stories from Our Partners",
+      "items": [
+        {
+          "quote": "Joining SkyCourt was the best decision we made. The visitor traffic is unparalleled, and our sales increased by 150% in the first year alone.",
+          "author": "KFC Branch Manager",
+          "result": "150% Sales Increase"
+        },
+        {
+          "quote": "The support we receive from the mall management is exceptional. From marketing to maintenance, everything is handled with high professionalism, allowing us to focus on serving our customers.",
+          "author": "Hardee's Franchisee",
+          "result": "Highest Foot Traffic"
+        },
+        {
+          "quote": "The mall's strategic location on the North Coast makes it a prime destination. We see great turnout throughout the year, not just in the summer season.",
+          "author": "Pizza Hut Team",
+          "result": "High Turnout All Year"
+        }
+      ]
+    },
+    "benefits_timeline": {
+      "title": "Your Journey with SkyCourt",
+      "items": [
+        {
+          "title": "Flexible Contracts",
+          "description": "We offer flexible annual contracts that suit your business needs and growth aspirations."
+        },
+        {
+          "title": "Marketing Support",
+          "description": "Benefit from the mall's ongoing marketing campaigns to increase your brand awareness."
+        },
+        {
+          "title": "Continuous Maintenance",
+          "description": "Our skilled maintenance teams are available around the clock to ensure your business continuity."
+        },
+        {
+          "title": "Professional Management",
+          "description": "We use the latest management systems to ensure a smooth and efficient experience for all tenants."
+        },
+        {
+          "title": "Business Community",
+          "description": "Join a selection of established brands and benefit from an integrated business environment."
+        }
+      ]
     },
     "final_cta_section": {
       "title": "Ready to be part of the largest mall on the North Coast?",

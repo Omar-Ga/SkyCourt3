@@ -22,7 +22,7 @@ type Testimonial = {
 type Story = Service | Testimonial;
 
 export default function Stories() {
-  const { t, i18n } = useTranslation(['services', 'testimonials']);
+  const { t, i18n } = useTranslation();
   const services = t('services', { returnObjects: true }) as { title: string; description: string; image: string; objectPosition?: string }[];
   const testimonials = t('testimonials', { returnObjects: true }) as { name: string; rating: number; comment: string; location: string }[];
 

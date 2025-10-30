@@ -1,4 +1,69 @@
 {
   "dining_headline": "Explore Our Dining Options",
-  "dining_subheadline": "From fine dining to casual eateries, we have something for everyone."
+  "dining_subheadline": "From fine dining to casual eateries, we have something for everyone.",
+  "eateries": {
+    "kfc": {
+      "name": "KFC",
+      "detail1": "World-famous crispy fried chicken.",
+      "detail2": "Family buckets and combo meals.",
+      "detail3": "Fresh, hot, and delicious.",
+      "detail4": "Signature sides and beverages."
+    },
+    "hardees": {
+      "name": "Hardees",
+      "detail1": "Charbroiled burgers with a signature taste.",
+      "detail2": "Premium quality beef and fresh ingredients.",
+      "detail3": "Breakfast served all day.",
+      "detail4": "Hand-breaded chicken tenders."
+    },
+    "balbaa-village": {
+      "name": "Balbaa Village",
+      "detail1": "Placeholder detail 1 for Balbaa Village.",
+      "detail2": "Placeholder detail 2 for Balbaa Village.",
+      "detail3": "Placeholder detail 3 for Balbaa Village.",
+      "detail4": "Placeholder detail 4 for Balbaa Village."
+    },
+    "blaban": {
+      "name": "Blaban",
+      "detail1": "Traditional Middle Eastern dishes.",
+      "detail2": "Fresh mezze and grilled specialties.",
+      "detail3": "A family-friendly dining environment.",
+      "detail4": "Authentic flavors and recipes."
+    },
+    "khatab": {
+      "name": "Khatab",
+      "detail1": "Placeholder detail 1 for Khatab.",
+      "detail2": "Placeholder detail 2 for Khatab.",
+      "detail3": "Placeholder detail 3 for Khatab.",
+      "detail4": "Placeholder detail 4 for Khatab."
+    },
+    "donia-al-gambary": {
+      "name": "Donia Al Gambary",
+      "detail1": "Placeholder detail 1 for Donia Al Gambary.",
+      "detail2": "Placeholder detail 2 for Donia Al Gambary.",
+      "detail3": "Placeholder detail 3 for Donia Al Gambary.",
+      "detail4": "Placeholder detail 4 for Donia Al Gambary."
+    },
+    "koshary-al-tahrir": {
+      "name": "Koshary Al Tahrir",
+      "detail1": "Placeholder detail 1 for Koshary Al Tahrir.",
+      "detail2": "Placeholder detail 2 for Koshary Al Tahrir.",
+      "detail3": "Placeholder detail 3 for Koshary Al Tahrir.",
+      "detail4": "Placeholder detail 4 for Koshary Al Tahrir."
+    },
+    "primos-pizza": {
+      "name": "Primos Pizza",
+      "detail1": "Placeholder detail 1 for Primos Pizza.",
+      "detail2": "Placeholder detail 2 for Primos Pizza.",
+      "detail3": "Placeholder detail 3 for Primos Pizza.",
+      "detail4": "Placeholder detail 4 for Primos Pizza."
+    },
+    "pizza-hut": {
+      "name": "Pizza Hut",
+      "detail1": "Classic pan pizzas with premium ingredients.",
+      "detail2": "Wide variety of toppings and flavors.",
+      "detail3": "Perfect for family dining.",
+      "detail4": "Fresh dough made daily."
+    }
+  }
 }

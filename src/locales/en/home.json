@@ -19,7 +19,172 @@
   "location": "Location",
   "email_link": "Contact Us",
   "careers_link": "Careers",
+  "home": "Home",
+  "about_us": "About Us",
+  "contact": "Contact",
+  "careers": "Careers",
+  "rentals": "Business Partners",
   "dining_headline": "Dining at SkyCourt",
   "dining_subheadline": "Explore a curated selection of restaurants.",
-  "discover_restaurants": "Discover Our restaurants"
+  "discover_restaurants": "Discover Our restaurants",
+  "rotating_texts": [
+    "50+ premium shops and brands.",
+    "all your favorite brands.",
+    "unforgettable moments."
+  ],
+  "services": [
+    {
+      "title": "Safe & Fun Kids Area",
+      "description": "Enjoy peace of mind with our fully enclosed and supervised play space for your children.",
+      "image": "/home_images/kids_area.webp"
+    },
+    {
+      "title": "24-Hour Supermarket",
+      "description": "All your needs, anytime. Our supermarket is open 24/7 for your convenience.",
+      "image": "/home_images/supermarket.webp",
+      "objectPosition": "top"
+    }
+  ],
+  "features": [
+    {
+      "key": "premium_shopping",
+      "title": "Premium Shopping",
+      "description": "Discover over 50 premium brands and local favorites all under one roof"
+    },
+    {
+      "key": "prime_location",
+      "title": "Prime Location",
+      "description": "Strategically located in one of the city's most luxurious and accessible districts"
+    },
+    {
+      "key": "always_open",
+      "title": "Always Open",
+      "description": "Experience SkyCourt 24/7, ensuring convenience at any time"
+    },
+    {
+      "key": "safe_environment",
+      "title": "Safe Environment",
+      "description": "24/7 security and family-friendly atmosphere for peace of mind"
+    },
+    {
+      "key": "modern_amenities",
+      "title": "Modern Amenities",
+      "description": "Enjoy a comfortable and convenient experience with our modern facilities"
+    },
+    {
+      "key": "convenient_parking",
+      "title": "Convenient Parking",
+      "description": "Ample parking space with easy access for all visitors"
+    }
+  ],
+  "brands": [
+    {
+      "name": "B-Tech"
+    },
+    {
+      "name": "Balbaa Village"
+    },
+    {
+      "name": "Blaban"
+    },
+    {
+      "name": "Bright Store"
+    },
+    {
+      "name": "Dream 2000"
+    },
+    {
+      "name": "Fathalla Market"
+    },
+    {
+      "name": "Ftirty and Friscato"
+    },
+    {
+      "name": "Donia El Gambary"
+    },
+    {
+      "name": "Hardees"
+    },
+    {
+      "name": "KFC"
+    },
+    {
+      "name": "Khatab"
+    },
+    {
+      "name": "Pizza Hut"
+    },
+    {
+      "name": "Raya"
+    },
+    {
+      "name": "Smart Furniture"
+    },
+    {
+      "name": "El Tahrir"
+    },
+    {
+      "name": "Darak"
+    },
+    {
+      "name": "Noor nails"
+    },
+    {
+      "name": "Pets spot"
+    },
+    {
+      "name": "Al Mokhtabar"
+    },
+    {
+      "name": "NSA Lab"
+    },
+    {
+      "name": "Masr aswan fish food"
+    },
+    {
+      "name": "Bravo minimarket"
+    },
+    {
+      "name": "Bella ciao"
+    },
+    {
+      "name": "Zatona"
+    },
+    {
+      "name": "Nefertity perfumes"
+    },
+    {
+      "name": "Shal sewa"
+    },
+    {
+      "name": "Leather house"
+    },
+    {
+      "name": "Bta3 el ward"
+    },
+    {
+      "name": "Vape station"
+    },
+    {
+      "name": "Doctor sushi"
+    },
+    {
+      "name": "Al madina al monawara"
+    },
+    {
+      "name": "Pinata kids area"
+    },
+    {
+      "name": "Al forsan"
+    },
+    {
+      "name": "Hopsy"
+    },
+    {
+      "name": "Al ezaby beauty"
+    },
+    {
+      "name": "Sarah pharmacy"
+    }
+  ]
 }

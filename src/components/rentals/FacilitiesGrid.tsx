@@ -73,7 +73,7 @@ export default function FacilitiesGrid() {
                   {t(`rentals_page.facilities.items.${index}.title`)}
                 </motion.h3>
                 <motion.p
-                  className="text-base md:text-lg font-medium text-gray-200 transition-opacity duration-300 mt-auto"
+                  className="text-base md:text-lg font-medium text-gray-200 transition-opacity duration-300 mt-auto leading-snug"
                   initial={{ y: 10 }}
                   whileHover={isMobile ? {} : { y: 0 }}
                   transition={{ duration: 0.3 }}

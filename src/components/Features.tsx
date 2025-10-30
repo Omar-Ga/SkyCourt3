@@ -4,7 +4,8 @@ import { useRef, useState } from 'react';
 import { FeatureItem } from './FeatureItem';
 export default function Features() {
   const { t } = useTranslation();
-  const features = t('features', { returnObjects: true }) as { key: string; title: string; description: string }[];
+  const featuresData = t('features', { returnObjects: true });
+  const features = Array.isArray(featuresData) ? featuresData as { key: string; title: string; description: string }[] : [];
   
   const targetRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,7 +16,7 @@ export default function Features() {
   });
 
   const activeIndexValue = useTransform(scrollYProgress, (progress) => {
-      return Math.min(features.length - 1, Math.floor(progress * features.length));
+      return features.length > 0 ? Math.min(features.length - 1, Math.floor(progress * features.length)) : 0;
   });
 
   useMotionValueEvent(activeIndexValue, "change", (latest) => {
@@ -29,7 +30,7 @@ export default function Features() {
           className="text-center mb-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{}} 
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
