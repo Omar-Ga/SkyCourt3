@@ -11,8 +11,6 @@ dist
 dist-ssr
 *.local
 
-.vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -25,6 +23,9 @@ dist-ssr
 
 #user added files
 #ai prompts/
+.kilocode
+.kiro
+.vscode
 
 # Gemini generated files
 $guides/
