@@ -16,8 +16,6 @@ import enRentalsTranslation from './locales/en/rentals.json';
 import arRentalsTranslation from './locales/ar/rentals.json';
 import enServicesTranslation from './locales/en/services.json';
 import arServicesTranslation from './locales/ar/services.json';
-import enTestimonialsTranslation from './locales/en/testimonials.json';
-import arTestimonialsTranslation from './locales/ar/testimonials.json';
 
 // Add RTL direction support
 declare module 'i18next' {
@@ -32,10 +30,10 @@ i18n
   .init({
     resources: {
       en: {
-        translation: { ...enHomeTranslation, ...enAboutTranslation, ...enCareersTranslation, ...enContactUsTranslation, ...enDiningTranslation, ...enRentalsTranslation, ...enServicesTranslation, ...enTestimonialsTranslation },
+        translation: { ...enHomeTranslation, ...enAboutTranslation, ...enCareersTranslation, ...enContactUsTranslation, ...enDiningTranslation, ...enRentalsTranslation, ...enServicesTranslation },
       },
       ar: {
-        translation: { ...arHomeTranslation, ...arAboutTranslation, ...arCareersTranslation, ...arContactUsTranslation, ...arDiningTranslation, ...arRentalsTranslation, ...arServicesTranslation, ...arTestimonialsTranslation },
+        translation: { ...arHomeTranslation, ...arAboutTranslation, ...arCareersTranslation, ...arContactUsTranslation, ...arDiningTranslation, ...arRentalsTranslation, ...arServicesTranslation },
       },
     },
     fallbackLng: 'en',

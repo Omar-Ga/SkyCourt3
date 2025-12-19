@@ -1,44 +1,28 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useDrag } from '@use-gesture/react';
 
 type Service = {
-  type: 'service';
   title: string;
   description: string;
   image: string;
   objectPosition?: string;
 };
 
-type Testimonial = {
-  type: 'testimonial';
-  quote: string;
-  author: string;
-  location: string;
-};
-
-type Story = Service | Testimonial;
-
 export default function Stories() {
   const { t, i18n } = useTranslation();
-  const services = t('services', { returnObjects: true }) as { title: string; description: string; image: string; objectPosition?: string }[];
-  const testimonials = t('testimonials', { returnObjects: true }) as { name: string; rating: number; comment: string; location: string }[];
-
-  const stories: Story[] = [
-    ...services.map(s => ({ ...s, type: 'service' as const })),
-    ...testimonials.map(tm => ({ type: 'testimonial' as const, quote: tm.comment, author: tm.name, location: tm.location }))
-  ];
+  const services = t('services', { returnObjects: true }) as Service[];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % stories.length);
+    setCurrentSlide((prev) => (prev + 1) % services.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + stories.length) % stories.length);
+    setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
   };
 
   useEffect(() => {
@@ -50,7 +34,7 @@ export default function Stories() {
     });
   }, [services]);
 
-  const currentStory = stories[currentSlide];
+  const currentService = services[currentSlide];
 
   const bind = useDrag(({ swipe: [swipeX] }) => {
     if (i18n.language === 'ar') {
@@ -81,7 +65,7 @@ export default function Stories() {
           viewport={{}}
           transition={{ duration: 0.8 }}
         >
-          {t('stories_title')}
+          Services
         </motion.h2>
       </div>
 
@@ -95,68 +79,33 @@ export default function Stories() {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            {currentStory.type === 'service' ? (
-              <div className="relative w-full h-full">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
-                <img
-                  src={currentStory.image}
-                  alt={currentStory.title}
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: currentStory.objectPosition || 'center' }}
-                />
-                <div className="absolute inset-0 z-20 flex flex-col justify-end p-12 md:p-20">
-                  <motion.h3
-            className="text-4xl md:text-5xl font-light text-white mb-6"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                  >
-                    {currentStory.title}
-                  </motion.h3>
-                  <motion.p
-                    className="text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                  >
-                    {currentStory.description}
-                  </motion.p>
-                </div>
+            <div className="relative w-full h-full">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
+              <img
+                src={currentService.image}
+                alt={currentService.title}
+                className="w-full h-full object-cover"
+                style={{ objectPosition: currentService.objectPosition || 'center' }}
+              />
+              <div className="absolute inset-0 z-20 flex flex-col justify-end p-12 md:p-20">
+                <motion.h3
+                  className="text-4xl md:text-5xl font-light text-white mb-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  {currentService.title}
+                </motion.h3>
+                <motion.p
+                  className="text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  {currentService.description}
+                </motion.p>
               </div>
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-neutral-900 via-neutral-800 to-black flex items-center justify-center p-12">
-                <div className="max-w-4xl text-center">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                  >
-                    <Quote className="w-16 h-16 text-primary/20 mx-auto mb-8" />
-                  </motion.div>
-                  <motion.p
-                    className="text-3xl md:text-5xl font-light text-white mb-12"
-                    style={{ lineHeight: 1.8 }}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                  >
-                    "{currentStory.quote}"
-                  </motion.p>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                  >
-                    <p className="text-xl text-white font-medium mb-2">
-                      {currentStory.author}
-                    </p>
-                    <p className="text-sm text-white/60 tracking-wider uppercase">
-                      {currentStory.location}
-                    </p>
-                  </motion.div>
-                </div>
-              </div>
-            )}
+            </div>
           </motion.div>
         </AnimatePresence>
 
@@ -179,7 +128,7 @@ export default function Stories() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
-          {stories.map((_, index) => (
+          {services.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
