@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+Dockerfile
+nginx.conf
+.gitignore
+README.md
+# Exclude screenshots if they were still there (already removed)
+# screenshots
