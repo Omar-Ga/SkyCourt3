@@ -13,13 +13,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  server: {
-    host: '0.0.0.0', // Use 0.0.0.0 to listen on all interfaces
-    cors: {
-      origin: 'https://crown-pipe-waters-specially.trycloudflare.com',
-      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-      preflightContinue: false,
-      optionsSuccessStatus: 204,
-    },
-  },
 });
